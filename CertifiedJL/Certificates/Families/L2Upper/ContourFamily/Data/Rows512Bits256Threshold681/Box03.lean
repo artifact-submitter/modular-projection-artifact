@@ -1,0 +1,34 @@
+/-
+Copyright (c) 2026 Anonymous Author. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Anonymous Author
+-/
+
+import CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Spec.Instances.Rows512Bits256Threshold681
+import CertifiedJL.Arithmetic.Interval.Interval
+
+/-! Raw generated endpoints for upper-contour family box 3. -/
+
+namespace CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows512Bits256Threshold681.Box03
+
+set_option linter.style.longLine false
+
+def chunks : List (Interval (CertifiedJL.SparseUpperContourFamily.Instances.Rows512Bits256Threshold681.parameters).precision) :=
+  [
+    ⟨0,
+      797159062598085374310831956906012413327210025098847915164908466801781475001832485205086459484221984600379371170343201287255294428873999105683941338200589⟩,
+    ⟨0,
+      1397702294591310829684952054033758169380617265699183345224837775840176389841660656323782972219843⟩,
+    ⟨0,
+      13474041658681004317842575402330035582⟩,
+    ⟨0,
+      8402855273435459396968334271487108857313924492516541514027082546301197141763541211⟩,
+    ⟨0,
+      252078453323248514298328329418212513557750385228895658412487019965492750819923866387683518696147472752915824228557289678333480475002565075285568235460462⟩
+  ]
+
+def expectedBound : Interval (CertifiedJL.SparseUpperContourFamily.Instances.Rows512Bits256Threshold681.parameters).precision :=
+  ⟨0,
+      11308541272298281480157533979471271231349999338436622486619591209811915623240700209550103216162529495220219833199822658022463923376161013250712481109257997⟩
+
+end CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows512Bits256Threshold681.Box03

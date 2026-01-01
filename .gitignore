@@ -1,0 +1,16 @@
+/.lake/
+/blueprint/print/
+/blueprint/web/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+/.DS_Store
+__pycache__/
+*.py[cod]
+
+# Generated validation state is not source.
+release-source-manifest.json
+.lake/

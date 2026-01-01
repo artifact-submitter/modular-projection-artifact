@@ -1,0 +1,15 @@
+{
+  "name": "CertifiedJL frozen proof bundle",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "BASE_IMAGE": "${localEnv:CERTIFIEDJL_BASE_IMAGE}"
+    }
+  },
+  "mounts": [
+    "source=${localEnv:CERTIFIEDJL_PROOF_BUNDLE},target=/artifact/proof-bundle.tar,type=bind,readonly"
+  ],
+  "workspaceFolder": "/workspace/proof-bundle/source",
+  "overrideCommand": true
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "family": "balanced-ternary-l2-upper",
+  "rows": 256,
+  "source_revision": "rows256-rescaled-frontier-v1",
+  "source_commit": "withheld-for-anonymous-review",
+  "verification_class": "replay_pending",
+  "base_certificate_id": "l2-upper-ternary-contour-rows256-bits152",
+  "provider_theorem": "CertifiedJL.CertificateProviders.sparseL2UpperContourRows256RescaledFrontier_verified",
+  "selector_theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ofCertifiedEndpointAtBits",
+  "selector_semantics": "A target is admitted only by explicit exact proofs that its row count is at most 256, a listed anchor threshold is at most its threshold, and its security exponent is at most the anchor exponent; no interpolation is certified.",
+  "endpoints": [
+    {
+      "id": "rows256-upper-bits140-u5623-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5623, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -140 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5623Over16Bits140"
+    },
+    {
+      "id": "rows256-upper-bits141-u5641-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5641, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -141 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5641Over16Bits141"
+    },
+    {
+      "id": "rows256-upper-bits142-u5659-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5659, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -142 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5659Over16Bits142"
+    },
+    {
+      "id": "rows256-upper-bits143-u5677-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5677, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -143 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5677Over16Bits143"
+    },
+    {
+      "id": "rows256-upper-bits144-u2847-over8",
+      "side": "upper",
+      "threshold": { "numerator": 2847, "denominator": 8 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -144 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2847Over8Bits144"
+    },
+    {
+      "id": "rows256-upper-bits145-u357",
+      "side": "upper",
+      "threshold": { "numerator": 357, "denominator": 1 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -145 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper357Bits145"
+    },
+    {
+      "id": "rows256-upper-bits146-u2865-over8",
+      "side": "upper",
+      "threshold": { "numerator": 2865, "denominator": 8 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -146 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2865Over8Bits146"
+    },
+    {
+      "id": "rows256-upper-bits147-u1437-over4",
+      "side": "upper",
+      "threshold": { "numerator": 1437, "denominator": 4 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -147 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper1437Over4Bits147"
+    },
+    {
+      "id": "rows256-upper-bits148-u5765-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5765, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -148 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5765Over16Bits148"
+    },
+    {
+      "id": "rows256-upper-bits149-u5783-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5783, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -149 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5783Over16Bits149"
+    },
+    {
+      "id": "rows256-upper-bits150-u5801-over16",
+      "side": "upper",
+      "threshold": { "numerator": 5801, "denominator": 16 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -150 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5801Over16Bits150"
+    },
+    {
+      "id": "rows256-upper-bits151-u2909-over8",
+      "side": "upper",
+      "threshold": { "numerator": 2909, "denominator": 8 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -151 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2909Over8Bits151"
+    },
+    {
+      "id": "rows256-upper-bits152-u1459-over4",
+      "side": "upper",
+      "threshold": { "numerator": 1459, "denominator": 4 },
+      "failure_cap": { "kind": "power_of_two", "exponent": -152 },
+      "theorem": "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper1459Over4Bits152"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+schema_version = 3
+snapshot_date = "2026-09-14"
+paper_title = "Tight Bounds for Modular Johnson-Lindenstrauss: Heuristic-Free and Formally Verified"
+paper_author = "Anonymous Author and Anonymous Author"
+paper_repository = "certified-jl"
+paper_git_head = "withheld-for-anonymous-review"
+paper_git_prefix = "paper"
+paper_commit_tree_clean = true
+
+[[source]]
+path = "sections/certified-jl/introduction.tex"
+sha256 = "d527711b8bd3b418d1f3fced36050b05eab4867811fd2d8efe57e012eeff4b12"
+[[source]]
+path = "sections/certified-jl/euclidean_lower_tails.tex"
+sha256 = "22705238efcbab52172d8daecc2c31e663d7ae0d1c05caa55a3de6c4c6f86ab0"
+[[source]]
+path = "sections/certified-jl/coordinatewise_lower_tails.tex"
+sha256 = "fe5c428fc149137d90d94863c3dcc957c87fe5b5bcf199e6c9d853459c47d4e4"
+[[source]]
+path = "sections/certified-jl/euclidean_upper_tails.tex"
+sha256 = "561e414b98bd8f64fd8c53598357813158249ba7aa9abcaa379ebf97d2720a31"
+[[source]]
+path = "sections/certified-jl/coordinatewise_upper_tails.tex"
+sha256 = "e9a584bcc867e7821bb6b16fd84cb30a8ada07d45f112e4b9f7334d0cc1404c9"
+[[source]]
+path = "sections/certified-jl/tutorial_preliminaries.tex"
+sha256 = "5cae3c7fb7658120852f0b4f595df62d643771fa686091288b92460eefa551b2"
+[[source]]
+path = "sections/certified-jl/appendix_c_shifted_euclidean_lower.tex"
+sha256 = "147f8f9971d590cc7400ce95119c069c6adb0c6bfcc8a1c0b53d12a8d693c596"
+[[source]]
+path = "sections/certified-jl/appendix_d_coordinatewise_lower.tex"
+sha256 = "837950a3b535b1e554d5dfaddb444404b8817c2467e3989901ad0ff02f32b0cd"
+[[source]]
+path = "sections/certified-jl/appendix_e_euclidean_upper.tex"
+sha256 = "9e598f0e310af64e8cc3e090a7c6d68ccd6763a3d8f91cd94a200ed4cabc023b"
+[[source]]
+path = "sections/certified-jl/appendix_f_coordinatewise_upper.tex"
+sha256 = "2057b74503e3a8cbb6847cf889390c939ef8444c66423ea07c03d082a5cfcf57"
+[[source]]
+path = "sections/certified-jl/appendix_g_parameter_families.tex"
+sha256 = "8516d314744e0fc27c6498555829a407138f113136269f60e642ce07883d83e4"
+[[source]]
+path = "sections/certified-jl/appendix_h_counterexamples.tex"
+sha256 = "f483d313da98a71db48572b25fb697f0c95cc1e5319dfcd71f2ce884035e8665"
+
+[[context]]
+path = "sections/certified-jl/abstract.tex"
+sha256 = "c32bf63dfa33b094c7db9d9718a60df0f8b03f7e406e135c702e5c0115e34b0c"
+[[context]]
+path = "sections/certified-jl/preliminaries_and_technique_map.tex"
+sha256 = "a020ef8d57c7c7e4288831d340385a5c21141edc7e3e4a8388adc04c84156244"
+[[context]]
+path = "sections/certified-jl/counterexamples_and_parameter_limits.tex"
+sha256 = "f6c3eac6f4fa14fe2724a8ffbb1a60a5411632c0eeb2a71411518a2290f97def"
+[[context]]
+path = "sections/certified-jl/formal_verification_and_applications.tex"
+sha256 = "0b75e0ce1f328a7b01b9d17c477bb198a2956314931852039ec6f8e6c08150d2"
+[[context]]
+path = "sections/certified-jl/supplement_guide.tex"
+sha256 = "657abf7223bcc92243b2ba7c7f1356e8729f66f919ea3cbe8c0217fcc3773758"
+[[context]]
+path = "sections/certified-jl/appendix_b_euclidean_lower.tex"
+sha256 = "b74d5590d843f5109a3dc777c6470eb0186b858b66cd0ac36268158f09499f15"
+[[context]]
+path = "sections/certified-jl/appendix_i_protocol_interfaces.tex"
+sha256 = "41d22dfac804446e26dfab22b725f8eb4227afbc8d5a564d9fe65f28a355d9b7"
+[[context]]
+path = "sections/certified-jl/appendix_j_formalization.tex"
+sha256 = "eff5f6ff95f3cd046caeacf6af71c4dd3ef6e8fe116261edc7dde610098d3cf0"
+[[context]]
+path = "sections/certified-jl/appendix_k_ai_research.tex"
+sha256 = "535322abe45d69c42b3f547dc6e7aab17b823ccd04f13a840eff2d805bfb12d6"
+[[context]]
+path = "generated/formalization-table.tex"
+sha256 = "c12887b0c9793d1ed2f3167fd3d7bbe9a19d2419f4372d0a4ff1ae4306745b42"
+
+[[artifact]]
+path = "artifact/verify_all.py"
+sha256 = "c6e8c0652fd9c33358d2096d11d2ae732126b25d51bc910254a610718797cbfa"
+[[artifact]]
+path = "artifact/orthus/verify_orthus_infinity_counterexample.py"
+sha256 = "1b10b1ce3596154788ffc498b9c413d8d253c7d7092080060de8e0426ee8d076"
+[[artifact]]
+path = "artifact/single-row/README.md"
+sha256 = "d615764a27a53d0da6cfda914fb3487648d5f2466631a674b98072991fdf5396"
+[[artifact]]
+path = "artifact/single-row/verify_single_row_975.py"
+sha256 = "ae4c881bca1f0af26b3635f09f257c2a14a3393c644be76317facea67bcdf4c0"
+[[artifact]]
+path = "artifact/upper-gap/README.md"
+sha256 = "f2c0461c4a0d807f17755a6f53ef3ebe13340994f8abde7acef9eef56e02bb62"
+[[artifact]]
+path = "artifact/upper-gap/verify_high_security_upper_obstructions.py"
+sha256 = "f23f91554217b7321aaa13e16d0d1ac5e56a8b87dbd850a9466b84d03e70602b"
+[[artifact]]
+path = "artifact/upper-gap/verify_high_security_upper_contour_configs.py"
+sha256 = "18b3100f20b481348137e5a448cdea8d182a51b01faac76e3f0b5970c42ad2e4"
+[[artifact]]
+path = "artifact/upper-gap/upper_frontier_contour_core.py"
+sha256 = "0f686e434db2f034f47d899f69968a14b2159ccd7349c2c0129e61c70780744f"
+[[artifact]]
+path = "artifact/upper-gap/verify_336_counterexample.py"
+sha256 = "cd617632e3fa6c1da46cadad1f5cefae41c347a0140be8423004a1df2b33c939"
+[[artifact]]
+path = "artifact/upper-gap/verify_U338.py"
+sha256 = "45756f3647c19fbd4e98fd3ebcfb335b06f9a11253da67e5661b85decef00879"
+[[artifact]]
+path = "artifact/upper-gap/verify_upper_frontier_flat_obstructions.py"
+sha256 = "b4aa0a8fb0b1f63741724163d7607c8deeeb5449a60ca89a9e4bf036f7194e5c"
+[[artifact]]
+path = "artifact/upper-gap/verify_rows192_linf_upper_limit.py"
+sha256 = "3ff85bcbe5d100c7ef8e8e2a38868899f7e40336c3a8fa2b80a145f118fcedcf"
+[[artifact]]
+path = "artifact/upper-gap/verify_upper_frontier_sparse_contours.py"
+sha256 = "c9bbe9ee5f70180f305c661ffc532a09a2d1a1f16c8d2f7752f986d2eb6181b2"
+[[artifact]]
+path = "artifact/upper-gap/verify_upper_gap.py"
+sha256 = "93dcf30ffe5f809049eb9c29f4da1d8eba8fecd0cf6596a270fe5db0f343f60a"
+
+[[artifact]]
+path = "artifact/lower-gap/README.md"
+sha256 = "a1fa673f8e3bd63238de91544223d14b7259abd3d6f5408312386f59d6a60012"
+
+[[artifact]]
+path = "artifact/lower-gap/verify_512_192_threshold_76_counterexample.py"
+sha256 = "0e525a9d8770b4c2d07b23d4a80511e9342fcb6e3fb2887b6c35eb4f5dd0cad6"
+
+[[context]]
+path = "terminology.tex"
+sha256 = "3d205396d1ad9a15c5d35f877c948eb3ccb708d8292ace013454c74db6a182a3"

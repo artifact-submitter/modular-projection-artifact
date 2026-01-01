@@ -1,0 +1,2404 @@
+schema_version = 1
+source_result_sha256 = "557e0135de86d1e822d6e76465e1ff698828486752f06d080b22777022301edf"
+source_claim_sha256 = "06f9258b98283b05bf11b16528743e11178f37ec295c6c386fc7934751883dcb"
+
+[[comparison]]
+id = "l2-lower-rows192-12-2128-margin-3-over-1"
+result_ids = ["rows192-ternary-l2-threshold-lower-12-bits128"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 192
+failure_budget = "2^-128"
+threshold_numerator = 12
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "singleton-rows192-floor14-bits128-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows192-floor14-bits128"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 192
+output_threshold_numerator = 14
+output_threshold_denominator = 1
+output_budget_bits = 128
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows192Floor14Bits128False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 14 at 192 rows and 128 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows256-floor13-bits192-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows256-floor13-bits192"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 256
+output_threshold_numerator = 13
+output_threshold_denominator = 1
+output_budget_bits = 192
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor13Bits192False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 13 at 256 rows and 192 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows384-floor45-bits192-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows384-floor45-bits192"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 384
+output_threshold_numerator = 45
+output_threshold_denominator = 1
+output_budget_bits = 192
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows384Floor45Bits192False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 45 at 384 rows and 192 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows512-floor59-bits256-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows512-floor59-bits256"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 512
+output_threshold_numerator = 59
+output_threshold_denominator = 1
+output_budget_bits = 256
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Floor59Bits256False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 59 at 512 rows and 256 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows256-floor29-bits132-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows256-floor29-bits132"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 256
+output_threshold_numerator = 29
+output_threshold_denominator = 1
+output_budget_bits = 132
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor29Bits132False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 29 at 256 rows and 132 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows256-floor9-bits208-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows256-floor9-bits208"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 256
+output_threshold_numerator = 9
+output_threshold_denominator = 1
+output_budget_bits = 208
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor9Bits208False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 9 at 256 rows and 208 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows384-floor43-bits197-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows384-floor43-bits197"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 384
+output_threshold_numerator = 43
+output_threshold_denominator = 1
+output_budget_bits = 197
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows384Floor43Bits197False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 43 at 384 rows and 197 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "singleton-rows512-floor57-bits261-obstruction"
+parent_ids = ["negative-ternary-singleton-binomial"]
+rule_id = "singleton-binomial-specialization"
+parameter_transform = "singleton:rows512-floor57-bits261"
+output_family = "l2-lower"
+output_modulus_margin_numerator = 3
+output_modulus_margin_denominator = 1
+output_rows = 512
+output_threshold_numerator = 57
+output_threshold_denominator = 1
+output_budget_bits = 261
+output_event_comparison = "strict_lt"
+lean_declaration = "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Floor57Bits261False"
+additional_verification_class = "replay_pending"
+summary = "Singleton binomial specialization refutes floor 57 at 512 rows and 261 bits."
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-20-2151-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-20-bits151"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-151"
+threshold_numerator = 20
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-21-2148-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-21-bits148"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-148"
+threshold_numerator = 21
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-22-2144-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-22-bits144"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-144"
+threshold_numerator = 22
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-29-2128-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-29-bits128"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-128"
+threshold_numerator = 29
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "headline"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+positive_verification_class = "kernel_checked"
+verification_class = "external_exact_artifact"
+witness_ids = ["ternary-ones16-q9-b4"]
+bracket_lower_excluded_numerator = "9"
+bracket_lower_excluded_denominator = "4"
+bracket_lower_excluded_included = true
+bracket_valid_point_numerator = "3"
+bracket_valid_point_denominator = "1"
+bracket_valid_point_included = true
+
+[[comparison]]
+id = "l2-lower-rows256-41-over-2-2150-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-41-over-2-bits150"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-150"
+threshold_numerator = 41
+threshold_denominator = 2
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-43-over-2-2146-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-43-over-2-bits146"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-146"
+threshold_numerator = 43
+threshold_denominator = 2
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-79-over-4-2152-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-79-over-4-bits152"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-152"
+threshold_numerator = 79
+threshold_denominator = 4
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-83-over-4-2149-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-83-over-4-bits149"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-149"
+threshold_numerator = 83
+threshold_denominator = 4
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-85-over-4-2147-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-85-over-4-bits147"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-147"
+threshold_numerator = 85
+threshold_denominator = 4
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-87-over-4-2145-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-87-over-4-bits145"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-145"
+threshold_numerator = 87
+threshold_denominator = 4
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_lower"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-lower-rows256-9-2192-margin-3-over-1"
+result_ids = ["rows256-ternary-l2-threshold-lower-9-bits192"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-192"
+threshold_numerator = 9
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-lower-rows384-43-2192-margin-3-over-1"
+result_ids = ["rows384-ternary-l2-threshold-lower-43-bits192"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 384
+failure_budget = "2^-192"
+threshold_numerator = 43
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-lower-rows512-57-2256-margin-3-over-1"
+result_ids = ["rows512-ternary-l2-threshold-lower-57-bits256"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-256"
+threshold_numerator = 57
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-lower-rows512-71-2192-margin-3-over-1"
+result_ids = ["rows512-ternary-l2-threshold-lower-71-bits192"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-192"
+threshold_numerator = 71
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-lower-rows512-73-2192-margin-3-over-1"
+result_ids = ["rows512-ternary-l2-threshold-lower-73-bits192"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-192"
+threshold_numerator = 73
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-lower-rows512-73-2193-margin-3-over-1"
+result_ids = ["rows512-ternary-l2-threshold-lower-73-bits193"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-193"
+threshold_numerator = 73
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows192-287-2128-unrestricted"
+result_ids = ["rows192-ternary-affine-l2-upper-287-bits128", "rows192-ternary-l2-upper-287-bits128"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 192
+failure_budget = "2^-128"
+threshold_numerator = 287
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows195-338-2128-unrestricted"
+result_ids = ["rows195-ternary-affine-l2-upper-338-bits128", "rows195-ternary-l2-upper-338-bits128"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 195
+failure_budget = "2^-128"
+threshold_numerator = 338
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows256-1437-over-4-2147-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-1437-over-4-bits147"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-147"
+threshold_numerator = 1437
+threshold_denominator = 4
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-1459-over-4-2152-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-1459-over-4-bits152"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-152"
+threshold_numerator = 1459
+threshold_denominator = 4
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-2847-over-8-2144-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-2847-over-8-bits144"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-144"
+threshold_numerator = 2847
+threshold_denominator = 8
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-2865-over-8-2146-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-2865-over-8-bits146"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-146"
+threshold_numerator = 2865
+threshold_denominator = 8
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-2909-over-8-2151-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-2909-over-8-bits151"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-151"
+threshold_numerator = 2909
+threshold_denominator = 8
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-338-2128-unrestricted"
+result_ids = ["rows256-ternary-affine-l2-upper-338-bits128", "rows256-ternary-l2-upper-338-bits128"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-128"
+threshold_numerator = 338
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "headline"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows256-357-2145-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-357-bits145"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-145"
+threshold_numerator = 357
+threshold_denominator = 1
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-406-2192-unrestricted"
+result_ids = ["rows256-ternary-affine-l2-upper-406-bits192", "rows256-ternary-l2-upper-406-bits192"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-192"
+threshold_numerator = 406
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows256-5623-over-16-2140-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5623-over-16-bits140"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-140"
+threshold_numerator = 5623
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-5641-over-16-2141-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5641-over-16-bits141"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-141"
+threshold_numerator = 5641
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-5659-over-16-2142-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5659-over-16-bits142"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-142"
+threshold_numerator = 5659
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-5677-over-16-2143-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5677-over-16-bits143"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-143"
+threshold_numerator = 5677
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-5765-over-16-2148-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5765-over-16-bits148"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-148"
+threshold_numerator = 5765
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-5783-over-16-2149-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5783-over-16-bits149"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-149"
+threshold_numerator = 5783
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows256-5801-over-16-2150-unrestricted"
+result_ids = ["rows256-ternary-l2-upper-5801-over-16-bits150"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-150"
+threshold_numerator = 5801
+threshold_denominator = 16
+source_statistics = ["modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "sampled_positive_family"
+sampled_family = "sampled_upper"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "l2-upper-rows264-509-2128-unrestricted"
+result_ids = ["rows264-ternary-affine-l2-upper-509-bits128", "rows264-ternary-l2-upper-509-bits128"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 264
+failure_budget = "2^-128"
+threshold_numerator = 509
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows384-509-2192-unrestricted"
+result_ids = ["rows384-ternary-affine-l2-upper-509-bits192", "rows384-ternary-l2-upper-509-bits192"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 384
+failure_budget = "2^-192"
+threshold_numerator = 509
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows394-607-2192-unrestricted"
+result_ids = ["rows394-ternary-affine-l2-upper-607-bits192", "rows394-ternary-l2-upper-607-bits192"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 394
+failure_budget = "2^-192"
+threshold_numerator = 607
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows512-607-2192-unrestricted"
+result_ids = ["rows512-ternary-affine-l2-upper-607-bits192", "rows512-ternary-l2-upper-607-bits192"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 512
+failure_budget = "2^-192"
+threshold_numerator = 607
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "l2-upper-rows512-681-2256-unrestricted"
+result_ids = ["rows512-ternary-affine-l2-upper-681-bits256", "rows512-ternary-l2-upper-681-bits256"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+rows = 512
+failure_budget = "2^-256"
+threshold_numerator = 681
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_norm", "modular_l2_squared"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-lower-rows192-17-over-50-2129-margin-2-over-1"
+result_ids = ["rows192-ternary-linf-threshold-lower-17-over-50-bits129"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 192
+failure_budget = "2^-129"
+threshold_numerator = 17
+threshold_denominator = 50
+source_statistics = ["modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-lower-rows256-21-over-50-2133-margin-2-over-1"
+result_ids = ["rows256-ternary-linf-threshold-lower-21-over-50-bits133"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-133"
+threshold_numerator = 21
+threshold_denominator = 50
+source_statistics = ["modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "headline"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-lower-rows256-6-over-25-2197-margin-2-over-1"
+result_ids = ["rows256-ternary-linf-threshold-lower-6-over-25-bits197"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-197"
+threshold_numerator = 6
+threshold_denominator = 25
+source_statistics = ["modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-lower-rows384-21-over-50-2200-margin-2-over-1"
+result_ids = ["rows384-ternary-linf-threshold-lower-21-over-50-bits200"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 384
+failure_budget = "2^-200"
+threshold_numerator = 21
+threshold_denominator = 50
+source_statistics = ["modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-lower-rows512-21-over-50-2266-margin-2-over-1"
+result_ids = ["rows512-ternary-linf-threshold-lower-21-over-50-bits266"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-266"
+threshold_numerator = 21
+threshold_denominator = 50
+source_statistics = ["modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-lower-rows512-47-over-100-2206-margin-2-over-1"
+result_ids = ["rows512-ternary-linf-threshold-lower-47-over-100-bits206"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-206"
+threshold_numerator = 47
+threshold_denominator = 100
+source_statistics = ["modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows192-487-over-50-2128-unrestricted"
+result_ids = ["rows192-ternary-affine-linf-upper-487-over-50-bits128", "rows192-ternary-linf-upper-487-over-50-bits128"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 192
+failure_budget = "2^-128"
+threshold_numerator = 487
+threshold_denominator = 50
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows256-1181-over-100-2192-unrestricted"
+result_ids = ["rows256-ternary-affine-linf-upper-1181-over-100-bits192", "rows256-ternary-linf-upper-1181-over-100-bits192"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-192"
+threshold_numerator = 1181
+threshold_denominator = 100
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows256-39-over-4-2133-unrestricted"
+result_ids = ["rows256-ternary-affine-linf-upper-39-over-4-bits133", "rows256-ternary-linf-upper-39-over-4-bits133"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 256
+failure_budget = "2^-133"
+threshold_numerator = 39
+threshold_denominator = 4
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "headline"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows384-1183-over-100-2192-unrestricted"
+result_ids = ["rows384-ternary-affine-linf-upper-1183-over-100-bits192", "rows384-ternary-linf-upper-1183-over-100-bits192"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 384
+failure_budget = "2^-192"
+threshold_numerator = 1183
+threshold_denominator = 100
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows462-679-over-50-2197-unrestricted"
+result_ids = ["rows462-ternary-affine-linf-upper-1358-over-100-bits197", "rows462-ternary-linf-upper-1358-over-100-bits197"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 462
+failure_budget = "2^-197"
+threshold_numerator = 679
+threshold_denominator = 50
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows512-296-over-25-2192-unrestricted"
+result_ids = ["rows512-ternary-affine-linf-upper-1184-over-100-bits192", "rows512-ternary-linf-upper-1184-over-100-bits192"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 512
+failure_budget = "2^-192"
+threshold_numerator = 296
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "linf-upper-rows512-679-over-50-2256-unrestricted"
+result_ids = ["rows512-ternary-affine-linf-upper-1358-over-100-bits256", "rows512-ternary-linf-upper-1358-over-100-bits256"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+rows = 512
+failure_budget = "2^-256"
+threshold_numerator = 679
+threshold_denominator = 50
+source_statistics = ["affine_modular_linf", "modular_linf"]
+source_event_comparisons = ["strict_gt"]
+classification = "equivalent_setting"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "replay_pending"
+setting_relation = "same_optimum_zero_mask"
+rule_ids = ["upper-mask-optimum"]
+positive_verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows192-11-2128-margin-3-over-1"
+result_ids = ["rows192-ternary-affine-l2-threshold-lower-11-bits128"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 192
+failure_budget = "2^-128"
+threshold_numerator = 11
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows195-12-2128-margin-3-over-1"
+result_ids = ["rows195-ternary-affine-l2-threshold-lower-12-bits128"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 195
+failure_budget = "2^-128"
+threshold_numerator = 12
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows256-27-2128-margin-3-over-1"
+result_ids = ["rows256-ternary-affine-l2-threshold-lower-27-bits128"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-128"
+threshold_numerator = 27
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "headline"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows256-9-2194-margin-3-over-1"
+result_ids = ["rows256-ternary-affine-l2-threshold-lower-9-bits194"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-194"
+threshold_numerator = 9
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows264-29-2128-margin-3-over-1"
+result_ids = ["rows264-ternary-affine-l2-threshold-lower-29-bits128"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 264
+failure_budget = "2^-128"
+threshold_numerator = 29
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows384-40-2192-margin-3-over-1"
+result_ids = ["rows384-ternary-affine-l2-threshold-lower-40-bits192"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 384
+failure_budget = "2^-192"
+threshold_numerator = 40
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows394-43-2192-margin-3-over-1"
+result_ids = ["rows394-ternary-affine-l2-threshold-lower-43-bits192"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 394
+failure_budget = "2^-192"
+threshold_numerator = 43
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows512-54-2256-margin-3-over-1"
+result_ids = ["rows512-ternary-affine-l2-threshold-lower-54-bits256"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-256"
+threshold_numerator = 54
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows512-73-2193-margin-3-over-1"
+result_ids = ["rows512-ternary-affine-l2-threshold-lower-73-bits193"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-193"
+threshold_numerator = 73
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-l2-lower-rows524-57-2256-margin-3-over-1"
+result_ids = ["rows524-ternary-affine-l2-threshold-lower-57-bits256"]
+family = "masked-l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 524
+failure_budget = "2^-256"
+threshold_numerator = 57
+threshold_denominator = 1
+source_statistics = ["affine_modular_l2_squared"]
+source_event_comparisons = ["strict_lt"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows192-279-over-1000-2129-margin-3-over-1"
+result_ids = ["rows192-ternary-affine-linf-threshold-lower-279-over-1000-bits129"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 192
+failure_budget = "2^-129"
+threshold_numerator = 279
+threshold_denominator = 1000
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows192-93-over-500-2129-margin-2-over-1"
+result_ids = ["rows192-ternary-affine-linf-threshold-lower-93-over-500-margin2-bits129"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 192
+failure_budget = "2^-129"
+threshold_numerator = 93
+threshold_denominator = 500
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-331-over-1000-2133-margin-3-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-331-over-1000-bits133"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-133"
+threshold_numerator = 331
+threshold_denominator = 1000
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-331-over-1500-2133-margin-2-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-331-over-1500-margin2-bits133"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-133"
+threshold_numerator = 331
+threshold_denominator = 1500
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-4-over-25-2197-margin-2-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-4-over-25-margin2-bits197"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-197"
+threshold_numerator = 4
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-6-over-25-2109-margin-2-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-6-over-25-margin2-bits109"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-109"
+threshold_numerator = 6
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-6-over-25-2197-margin-3-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-6-over-25-bits197"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-197"
+threshold_numerator = 6
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-67-over-200-2130-margin-3-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-67-over-200-bits130"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-130"
+threshold_numerator = 67
+threshold_denominator = 200
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "headline"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-67-over-300-2130-margin-2-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-67-over-300-margin2-bits130"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-130"
+threshold_numerator = 67
+threshold_denominator = 300
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows256-9-over-25-2109-margin-3-over-1"
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-9-over-25-bits109"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 256
+failure_budget = "2^-109"
+threshold_numerator = 9
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows384-331-over-1000-2200-margin-3-over-1"
+result_ids = ["rows384-ternary-affine-linf-threshold-lower-331-over-1000-bits200"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 384
+failure_budget = "2^-200"
+threshold_numerator = 331
+threshold_denominator = 1000
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows384-331-over-1500-2200-margin-2-over-1"
+result_ids = ["rows384-ternary-affine-linf-threshold-lower-331-over-1500-margin2-bits200"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 384
+failure_budget = "2^-200"
+threshold_numerator = 331
+threshold_denominator = 1500
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows462-6-over-25-2197-margin-2-over-1"
+result_ids = ["rows462-ternary-affine-linf-threshold-lower-6-over-25-margin2-bits197"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 462
+failure_budget = "2^-197"
+threshold_numerator = 6
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows462-9-over-25-2197-margin-3-over-1"
+result_ids = ["rows462-ternary-affine-linf-threshold-lower-9-over-25-bits197"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 462
+failure_budget = "2^-197"
+threshold_numerator = 9
+threshold_denominator = 25
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows512-331-over-1000-2266-margin-3-over-1"
+result_ids = ["rows512-ternary-affine-linf-threshold-lower-331-over-1000-bits266"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-266"
+threshold_numerator = 331
+threshold_denominator = 1000
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows512-331-over-1500-2266-margin-2-over-1"
+result_ids = ["rows512-ternary-affine-linf-threshold-lower-331-over-1500-margin2-bits266"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-266"
+threshold_numerator = 331
+threshold_denominator = 1500
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows512-46-over-125-2206-margin-3-over-1"
+result_ids = ["rows512-ternary-affine-linf-threshold-lower-46-over-125-bits206"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-206"
+threshold_numerator = 46
+threshold_denominator = 125
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "masked-linf-lower-rows512-92-over-375-2206-margin-2-over-1"
+result_ids = ["rows512-ternary-affine-linf-threshold-lower-92-over-375-margin2-bits206"]
+family = "masked-linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+rows = 512
+failure_budget = "2^-206"
+threshold_numerator = 92
+threshold_denominator = 375
+source_statistics = ["affine_modular_linf"]
+source_event_comparisons = ["closed_le"]
+classification = "independent_research_point"
+purpose = "tightness_bracket"
+priority = "catalog"
+completion_condition = "reviewed endpoint-aware bracket or stronger certified bound"
+status = "positive_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-dense-sign-universal-family"
+claim_ids = ["dense-sign-threshold29-concrete-obstruction", "dense-sign-universal-threshold-obstruction"]
+witness_ids = ["dense-sign-universal-family"]
+category = "structural_impossibility"
+axis = ["joint"]
+classification = "negative_bound"
+purpose = "structural_impossibility"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-lnp-binomial-families"
+claim_ids = ["lnp-kappa-one-counterexample", "lnp-kappa-two-counterexample"]
+witness_ids = ["lnp-binomial-families"]
+category = "literature_refutation"
+axis = ["joint"]
+classification = "negative_bound"
+purpose = "literature_refutation"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-orthus-two-coordinate"
+claim_ids = ["orthus-printed-infinity-counterexample"]
+witness_ids = ["orthus-two-coordinate"]
+category = "literature_refutation"
+axis = ["joint"]
+classification = "negative_bound"
+purpose = "literature_refutation"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-floor30"
+claim_ids = ["l2-threshold-rows256-floor30-bits128-obstruction"]
+witness_ids = ["ternary-floor30"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "negative-ternary-floor76-family"
+claim_ids = ["l2-threshold-rows512-at-least76-bits192-obstruction", "l2-threshold-rows512-floor76-bits192-obstruction"]
+witness_ids = ["ternary-floor76-family"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-high-dimensional-linf-upper"
+claim_ids = ["linf-upper-rows192-threshold487-over-50-bits134-obstruction"]
+witness_ids = ["ternary-high-dimensional-linf-upper"]
+family = "linf-upper"
+axis = ["norm", "security", "rows"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-high-dimensional-upper"
+claim_ids = ["l2-upper-rows192-threshold287-bits130-obstruction", "l2-upper-rows256-threshold404-bits192-obstruction", "l2-upper-rows384-threshold507-bits192-obstruction", "l2-upper-rows512-threshold605-bits192-obstruction", "l2-upper-rows512-threshold678-bits256-obstruction"]
+witness_ids = ["ternary-high-dimensional-upper"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-l2-floor12"
+claim_ids = ["l2-threshold-rows192-floor12-bits132-obstruction"]
+witness_ids = ["ternary-l2-floor12"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-linf-cap-half"
+claim_ids = ["linf-threshold-rows256-cap-one-half-bits128-every-margin-obstruction"]
+witness_ids = ["ternary-linf-cap-half"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-linf-cap34"
+claim_ids = ["linf-threshold-rows192-cap34-bits183-obstruction"]
+witness_ids = ["ternary-linf-cap34"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-linf-margin-one-family"
+claim_ids = ["linf-threshold-margin-one-obstruction"]
+witness_ids = ["ternary-linf-margin-one-family"]
+family = "linf-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "replay_pending"
+
+[[comparison]]
+id = "negative-ternary-singleton-binomial"
+claim_ids = ["l2-threshold-rows256-floor31-bits128-obstruction"]
+witness_ids = ["ternary-singleton-binomial"]
+family = "l2-lower"
+axis = ["modulus", "norm", "security", "joint"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[comparison]]
+id = "negative-ternary-sparse-upper-security"
+claim_ids = ["l2-upper-rows256-threshold336-bits128-obstruction", "l2-upper-rows256-threshold338-bits130-obstruction"]
+witness_ids = ["ternary-sparse-upper-security"]
+family = "l2-upper"
+axis = ["norm", "security", "rows"]
+classification = "negative_bound"
+purpose = "parameter_bound"
+priority = "claim"
+completion_condition = "existing promoted obstruction retained"
+status = "negative_bound_known"
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "unmasked-l2-lower-rows256-9-bits194"
+parent_ids = ["masked-l2-lower-rows256-9-2194-margin-3-over-1"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 9
+output_threshold_denominator = 1
+output_rows = 256
+output_failure_budget = "2^-194"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization recovers the unmasked lower threshold 9 at 194 bits."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "l2-upper-rows264-509-bits192"
+parent_ids = ["l2-upper-rows384-509-2192-unrestricted"]
+rule_id = "row-restriction"
+parameter_transform = "rows:384->264"
+source_rows = 384
+output_rows = 264
+output_family = "l2-upper"
+output_threshold_numerator = 509
+output_threshold_denominator = 1
+output_failure_budget = "2^-192"
+output_event_comparison = "strict_gt"
+summary = "Row restriction recovers upper 509 at 264 outputs and 192 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "linf-upper-rows462-1358-over-100-bits256"
+parent_ids = ["linf-upper-rows512-679-over-50-2256-unrestricted"]
+rule_id = "row-restriction"
+parameter_transform = "rows:512->462"
+source_rows = 512
+output_rows = 462
+output_family = "linf-upper"
+output_threshold_numerator = 1358
+output_threshold_denominator = 100
+output_failure_budget = "2^-256"
+output_event_comparison = "strict_gt"
+summary = "Row restriction recovers coordinate upper 1358/100 at 462 outputs and 256 bits."
+verification_class = "replay_pending"
+
+[[derived]]
+id = "l2-lower-floor76-bits193-obstruction"
+parent_ids = ["negative-ternary-floor76-family"]
+rule_id = "budget-strengthening-negative"
+parameter_transform = "budget_bits:192->193"
+source_budget_bits = 192
+output_budget_bits = 193
+output_family = "l2-lower"
+output_rows = 512
+output_threshold_numerator = 76
+output_threshold_denominator = 1
+output_event_comparison = "strict_lt"
+summary = "The same floor-76 probability exceeds both 2^-192 and 2^-193."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows192-ternary-affine-l2-threshold-lower-11-bits128"
+parent_ids = ["masked-l2-lower-rows192-11-2128-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 11
+source_threshold_denominator = 1
+output_threshold_numerator = 44
+output_threshold_denominator = 9
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 192
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows192-ternary-affine-l2-threshold-lower-11-bits128"
+parent_ids = ["four-ninths-margin-two-rows192-ternary-affine-l2-threshold-lower-11-bits128"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 44
+output_threshold_denominator = 9
+output_rows = 192
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows195-ternary-affine-l2-threshold-lower-12-bits128"
+parent_ids = ["masked-l2-lower-rows195-12-2128-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 12
+source_threshold_denominator = 1
+output_threshold_numerator = 16
+output_threshold_denominator = 3
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 195
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows195-ternary-affine-l2-threshold-lower-12-bits128"
+parent_ids = ["four-ninths-margin-two-rows195-ternary-affine-l2-threshold-lower-12-bits128"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 16
+output_threshold_denominator = 3
+output_rows = 195
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows256-ternary-affine-l2-threshold-lower-27-bits128"
+parent_ids = ["masked-l2-lower-rows256-27-2128-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 27
+source_threshold_denominator = 1
+output_threshold_numerator = 12
+output_threshold_denominator = 1
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 256
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows256-ternary-affine-l2-threshold-lower-27-bits128"
+parent_ids = ["four-ninths-margin-two-rows256-ternary-affine-l2-threshold-lower-27-bits128"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 12
+output_threshold_denominator = 1
+output_rows = 256
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows256-ternary-affine-l2-threshold-lower-9-bits194"
+parent_ids = ["masked-l2-lower-rows256-9-2194-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 9
+source_threshold_denominator = 1
+output_threshold_numerator = 4
+output_threshold_denominator = 1
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 256
+output_failure_budget = "2^-194"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows256-ternary-affine-l2-threshold-lower-9-bits194"
+parent_ids = ["four-ninths-margin-two-rows256-ternary-affine-l2-threshold-lower-9-bits194"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 4
+output_threshold_denominator = 1
+output_rows = 256
+output_failure_budget = "2^-194"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows264-ternary-affine-l2-threshold-lower-29-bits128"
+parent_ids = ["masked-l2-lower-rows264-29-2128-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 29
+source_threshold_denominator = 1
+output_threshold_numerator = 116
+output_threshold_denominator = 9
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 264
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows264-ternary-affine-l2-threshold-lower-29-bits128"
+parent_ids = ["four-ninths-margin-two-rows264-ternary-affine-l2-threshold-lower-29-bits128"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 116
+output_threshold_denominator = 9
+output_rows = 264
+output_failure_budget = "2^-128"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows384-ternary-affine-l2-threshold-lower-40-bits192"
+parent_ids = ["masked-l2-lower-rows384-40-2192-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 40
+source_threshold_denominator = 1
+output_threshold_numerator = 160
+output_threshold_denominator = 9
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 384
+output_failure_budget = "2^-192"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows384-ternary-affine-l2-threshold-lower-40-bits192"
+parent_ids = ["four-ninths-margin-two-rows384-ternary-affine-l2-threshold-lower-40-bits192"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 160
+output_threshold_denominator = 9
+output_rows = 384
+output_failure_budget = "2^-192"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows394-ternary-affine-l2-threshold-lower-43-bits192"
+parent_ids = ["masked-l2-lower-rows394-43-2192-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 43
+source_threshold_denominator = 1
+output_threshold_numerator = 172
+output_threshold_denominator = 9
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 394
+output_failure_budget = "2^-192"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows394-ternary-affine-l2-threshold-lower-43-bits192"
+parent_ids = ["four-ninths-margin-two-rows394-ternary-affine-l2-threshold-lower-43-bits192"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 172
+output_threshold_denominator = 9
+output_rows = 394
+output_failure_budget = "2^-192"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows512-ternary-affine-l2-threshold-lower-54-bits256"
+parent_ids = ["masked-l2-lower-rows512-54-2256-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 54
+source_threshold_denominator = 1
+output_threshold_numerator = 24
+output_threshold_denominator = 1
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 512
+output_failure_budget = "2^-256"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows512-ternary-affine-l2-threshold-lower-54-bits256"
+parent_ids = ["four-ninths-margin-two-rows512-ternary-affine-l2-threshold-lower-54-bits256"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 24
+output_threshold_denominator = 1
+output_rows = 512
+output_failure_budget = "2^-256"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows512-ternary-affine-l2-threshold-lower-73-bits193"
+parent_ids = ["masked-l2-lower-rows512-73-2193-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 73
+source_threshold_denominator = 1
+output_threshold_numerator = 292
+output_threshold_denominator = 9
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 512
+output_failure_budget = "2^-193"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows512-ternary-affine-l2-threshold-lower-73-bits193"
+parent_ids = ["four-ninths-margin-two-rows512-ternary-affine-l2-threshold-lower-73-bits193"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 292
+output_threshold_denominator = 9
+output_rows = 512
+output_failure_budget = "2^-193"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "four-ninths-margin-two-rows524-ternary-affine-l2-threshold-lower-57-bits256"
+parent_ids = ["masked-l2-lower-rows524-57-2256-margin-3-over-1"]
+rule_id = "four-ninths"
+parameter_transform = "modulus_margin:3->2"
+output_family = "masked-l2-lower"
+source_threshold_numerator = 57
+source_threshold_denominator = 1
+output_threshold_numerator = 76
+output_threshold_denominator = 3
+source_modulus_margin_numerator = 3
+source_modulus_margin_denominator = 1
+output_modulus_margin_numerator = 2
+output_modulus_margin_denominator = 1
+output_rows = 524
+output_failure_budget = "2^-256"
+output_event_comparison = "strict_lt"
+summary = "Existing fourNinths transport records the multiplier-two masked Euclidean consequence."
+verification_class = "kernel_checked"
+
+[[derived]]
+id = "zero-mask-row-expanded-rows524-ternary-affine-l2-threshold-lower-57-bits256"
+parent_ids = ["four-ninths-margin-two-rows524-ternary-affine-l2-threshold-lower-57-bits256"]
+rule_id = "masked-lower-zero-mask"
+parameter_transform = "mask:universal->zero"
+output_family = "l2-lower"
+output_threshold_numerator = 76
+output_threshold_denominator = 3
+output_rows = 524
+output_failure_budget = "2^-256"
+output_event_comparison = "strict_lt"
+summary = "Zero-mask specialization records the corresponding row-expanded unmasked consequence."
+verification_class = "kernel_checked"
+
+# Per-claim consequence identities preserve distinct parameters while shared
+# witness families avoid duplicate probability machinery.
+
+[[claim_consequence]]
+id = "consequence-dense-sign-threshold29-concrete-obstruction"
+claim_id = "dense-sign-threshold29-concrete-obstruction"
+comparison_id = "negative-dense-sign-universal-family"
+witness_id = "dense-sign-universal-family"
+source_semantic_sha256 = "d99d78fcd871fdc7424b75c9f823e20a4f4999ce03639683e266b2f47cc903fc"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-dense-sign-universal-threshold-obstruction"
+claim_id = "dense-sign-universal-threshold-obstruction"
+comparison_id = "negative-dense-sign-universal-family"
+witness_id = "dense-sign-universal-family"
+source_semantic_sha256 = "dd27b9b2ed39f9c91d4ba3751f16c8b13b5fd63d610de92a034ccd6eba1cb7b6"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-threshold-rows192-floor12-bits132-obstruction"
+claim_id = "l2-threshold-rows192-floor12-bits132-obstruction"
+comparison_id = "negative-ternary-l2-floor12"
+witness_id = "ternary-l2-floor12"
+source_semantic_sha256 = "c5c58bd1582308cbf386b12c2f5dda13b19eae33aea525c8122e53081a78a6e4"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-threshold-rows256-floor30-bits128-obstruction"
+claim_id = "l2-threshold-rows256-floor30-bits128-obstruction"
+comparison_id = "negative-ternary-floor30"
+witness_id = "ternary-floor30"
+source_semantic_sha256 = "7c74edcf538ab13595f1c115fc9b5c32c9fec05305b5766a734857149b77c406"
+verification_class = "replay_pending"
+
+[[claim_consequence]]
+id = "consequence-l2-threshold-rows256-floor31-bits128-obstruction"
+claim_id = "l2-threshold-rows256-floor31-bits128-obstruction"
+comparison_id = "negative-ternary-singleton-binomial"
+witness_id = "ternary-singleton-binomial"
+source_semantic_sha256 = "3d09b8584ec57423438a45b1c53c27503b6e2501fc88b7f591ac3b6bcdef7a20"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-threshold-rows512-at-least76-bits192-obstruction"
+claim_id = "l2-threshold-rows512-at-least76-bits192-obstruction"
+comparison_id = "negative-ternary-floor76-family"
+witness_id = "ternary-floor76-family"
+source_semantic_sha256 = "2c7fcfa9bbc79fba2b28af304e3bb50490311695cc1ea4ebb78854c831ee207a"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-threshold-rows512-floor76-bits192-obstruction"
+claim_id = "l2-threshold-rows512-floor76-bits192-obstruction"
+comparison_id = "negative-ternary-floor76-family"
+witness_id = "ternary-floor76-family"
+source_semantic_sha256 = "0dab4695e14f083079ba3929ab565b84302642a151a0cf58f9265e3172f1497f"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows192-threshold287-bits130-obstruction"
+claim_id = "l2-upper-rows192-threshold287-bits130-obstruction"
+comparison_id = "negative-ternary-high-dimensional-upper"
+witness_id = "ternary-high-dimensional-upper"
+source_semantic_sha256 = "aef21dbb6f4f4c6ba6cbf4aa9fc9ace808cf95f7ca0d1dbf02e640069ed33e91"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows256-threshold336-bits128-obstruction"
+claim_id = "l2-upper-rows256-threshold336-bits128-obstruction"
+comparison_id = "negative-ternary-sparse-upper-security"
+witness_id = "ternary-sparse-upper-security"
+source_semantic_sha256 = "dc65ac4bbe851014dd1bdf9fbe6a147615d09351255c0129b441669109da23be"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows256-threshold338-bits130-obstruction"
+claim_id = "l2-upper-rows256-threshold338-bits130-obstruction"
+comparison_id = "negative-ternary-sparse-upper-security"
+witness_id = "ternary-sparse-upper-security"
+source_semantic_sha256 = "ac3574da565e714500b2418df1685fe9b02d1c99c6aa5f22d1a63f26cc4c5735"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows256-threshold404-bits192-obstruction"
+claim_id = "l2-upper-rows256-threshold404-bits192-obstruction"
+comparison_id = "negative-ternary-high-dimensional-upper"
+witness_id = "ternary-high-dimensional-upper"
+source_semantic_sha256 = "fb7caf9bfb7653df5713607e6f224c2db4d21d726e837e3fe056be5351da3075"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows384-threshold507-bits192-obstruction"
+claim_id = "l2-upper-rows384-threshold507-bits192-obstruction"
+comparison_id = "negative-ternary-high-dimensional-upper"
+witness_id = "ternary-high-dimensional-upper"
+source_semantic_sha256 = "7b3fac641a5591d504da2ed0004c77bb58376c18db6e9ca6cab3b5de4c4e9535"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows512-threshold605-bits192-obstruction"
+claim_id = "l2-upper-rows512-threshold605-bits192-obstruction"
+comparison_id = "negative-ternary-high-dimensional-upper"
+witness_id = "ternary-high-dimensional-upper"
+source_semantic_sha256 = "66441046016f0576457f71676925e0072dc5c44207d6af8c2ae04d684046cddf"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-l2-upper-rows512-threshold678-bits256-obstruction"
+claim_id = "l2-upper-rows512-threshold678-bits256-obstruction"
+comparison_id = "negative-ternary-high-dimensional-upper"
+witness_id = "ternary-high-dimensional-upper"
+source_semantic_sha256 = "9aa9165c79cee7da426a87a7c6b8fd459fb84be46bd8939304b114a493b9f3d1"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-linf-threshold-margin-one-obstruction"
+claim_id = "linf-threshold-margin-one-obstruction"
+comparison_id = "negative-ternary-linf-margin-one-family"
+witness_id = "ternary-linf-margin-one-family"
+source_semantic_sha256 = "59743809a2aac5e4e2a4bdb9d5015f40fd0b6cadef9c8c07388598e8dbb9f701"
+verification_class = "replay_pending"
+
+[[claim_consequence]]
+id = "consequence-linf-threshold-rows192-cap34-bits183-obstruction"
+claim_id = "linf-threshold-rows192-cap34-bits183-obstruction"
+comparison_id = "negative-ternary-linf-cap34"
+witness_id = "ternary-linf-cap34"
+source_semantic_sha256 = "6eb0e8467d8e4e3c732aade556378104fe6f7e72f7711a553171c6af8384c697"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-linf-threshold-rows256-cap-one-half-bits128-every-margin-obstruction"
+claim_id = "linf-threshold-rows256-cap-one-half-bits128-every-margin-obstruction"
+comparison_id = "negative-ternary-linf-cap-half"
+witness_id = "ternary-linf-cap-half"
+source_semantic_sha256 = "900625618b3a0b8dc71a916b9d3028e3dff097efff7cfffd3baf53132cc336b4"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-linf-upper-rows192-threshold487-over-50-bits134-obstruction"
+claim_id = "linf-upper-rows192-threshold487-over-50-bits134-obstruction"
+comparison_id = "negative-ternary-high-dimensional-linf-upper"
+witness_id = "ternary-high-dimensional-linf-upper"
+source_semantic_sha256 = "db735906fd24b14a950ab133de499480731ad7458de8eb1a82da102ec111cb4a"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-lnp-kappa-one-counterexample"
+claim_id = "lnp-kappa-one-counterexample"
+comparison_id = "negative-lnp-binomial-families"
+witness_id = "lnp-binomial-families"
+source_semantic_sha256 = "5bbe24e95981419a5afce82d4396d1240d60db6f050716091de3432a66a9c181"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-lnp-kappa-two-counterexample"
+claim_id = "lnp-kappa-two-counterexample"
+comparison_id = "negative-lnp-binomial-families"
+witness_id = "lnp-binomial-families"
+source_semantic_sha256 = "bc6e23b061101ce75ae6d8ea9ecce768adac15cf0dfbfdee40bb4be1e7e08a61"
+verification_class = "kernel_checked"
+
+[[claim_consequence]]
+id = "consequence-orthus-printed-infinity-counterexample"
+claim_id = "orthus-printed-infinity-counterexample"
+comparison_id = "negative-orthus-two-coordinate"
+witness_id = "orthus-two-coordinate"
+source_semantic_sha256 = "f3a7a9cbbdb6612034d85b08037ec4bafe73bb1b00289ee3f879642949da7d35"
+verification_class = "kernel_checked"

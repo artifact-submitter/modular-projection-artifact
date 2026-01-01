@@ -1,0 +1,13 @@
+schema_version = 1
+name = "Gersh Vaaler source snapshot"
+root = "Vendor/GershVaaler"
+upstream_url = "https://github.com/gersh/ternary-goldbach-lean"
+upstream_revision = "89416190c037331d7ebc04cd62ddb974cfb4dfcf"
+license = "Apache-2.0"
+license_text = "Apache License 2.0"
+expected_lean_file_count = 68
+tree_manifest_sha256 = "b262624faed1659bc185da39ae4425e1a4451129ea096e4a2e614f126061cbf9"
+readme = "Vendor/GershVaaler/README.md"
+readme_sha256 = "051e1ea25a15cc744625533919961207bfefbca3214797f0b1b1dc298d124d29"
+notice = "NOTICE"
+notice_sha256 = "27022a670fc5e0223187c384cfb9272b45c6686f620a7d280a0243457c68667f"

@@ -1,0 +1,25 @@
+CertifiedJL
+Copyright 2026 Anonymous Author
+
+The original manuscript prose and TeX source under `paper/` are available
+under CC BY 4.0 as described in `paper/LICENSE.md`. Executable paper artifacts
+and experiments are available under Apache 2.0.
+
+Portions of the Vaaler--Beurling Fourier analysis are adapted from:
+
+Ternary Goldbach in Lean 4
+Copyright 2026 Gershon Bialer
+https://github.com/gersh/ternary-goldbach-lean
+Source revision: 89416190c037331d7ebc04cd62ddb974cfb4dfcf
+
+Those portions are used and modified under the Apache License, Version 2.0.
+The corresponding source files identify the adapted material and its
+provenance.
+
+The vendored snapshot lives under `Vendor/GershVaaler/`.  Its import roots
+were rewritten for this repository, obsolete diagnostic commands were
+removed, and small Lean 4.31 compatibility edits were applied.  One local
+elementary proof in `VaalerGPoUReprDecay.lean` replaces an upstream dependency
+on unrelated large-sieve material.  See `Vendor/GershVaaler/README.md` for the
+exact adaptation policy and verification procedure.  Every modified vendored
+Lean source carries a CertifiedJL modification notice in its license header.

@@ -1,0 +1,198 @@
+schema_version = 1
+
+# Replay families group semantic certificate boundaries that share an
+# executable validation root. They contain no scheduling, timeout, cache, or
+# historical run data; those are properties of validation infrastructure.
+
+[[family]]
+id = "one-row-moderate"
+certificate_ids = ["one-row-tyurin-moderate-grid"]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.OneRow975.NormalApproximation.Replay.CertificateProofs",
+]
+
+[[family]]
+id = "one-row-ternary-envelope"
+certificate_ids = ["one-row-ternary-scalar-envelope"]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.OneRow975.Finite.Soundness",
+]
+
+[[family]]
+id = "ternary-upper"
+certificate_ids = [
+  "l2-upper-ternary-hybrid-rows256-bits128",
+  "l2-upper-ternary-contour-rows512-bits192",
+  "l2-upper-ternary-contour-rows192-bits128",
+  "l2-upper-ternary-contour-rows256-bits152",
+  "l2-upper-ternary-contour-rows256-rescaled-frontier",
+  "l2-upper-ternary-contour-rows256-bits192",
+  "l2-upper-ternary-contour-rows384-bits192",
+  "l2-upper-ternary-contour-rows512-bits256",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Upper.Rows256Bits128.Replay.Verified",
+  "CertifiedJL.Certificates.Families.L2Upper.Rows512Bits192.ShortTail.Replay.Verified",
+  "CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows192Bits128Threshold287.Certificate",
+  "CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits152Threshold365.Certificate",
+  "CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256RescaledFrontier",
+  "CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.Certificate",
+  "CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows384Bits192Threshold509.Certificate",
+  "CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows512Bits256Threshold681.Certificate",
+]
+
+[[family]]
+id = "ternary-threshold-lower"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows256-bits128",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows256-bits128",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows256-bits128",
+  "l2-threshold-lower-ternary-dominant-retained-coarse-rows256-bits128",
+  "l2-threshold-lower-ternary-dominant-retained-chord-rows256-bits128",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows256-bits128",
+  "l2-threshold-lower-ternary-near-coarse-cover-rows256-bits128",
+  "l2-threshold-lower-ternary-near-chord-endpoints-rows256-bits128",
+  "l2-threshold-lower-ternary-near-curvature-cover-rows256-bits128",
+  "l2-threshold-lower-ternary-diffuse-low-scalar-rows256-bits128",
+  "l2-threshold-lower-ternary-diffuse-low-modular-tail-rows256-bits128",
+  "l2-threshold-lower-ternary-diffuse-high-endpoints-rows256-bits128",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover128Selector",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.CappedFourierCover128Selector",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.SingletonFourierCover128Selector",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows256Bits128.Dominant.Soundness.ThresholdDominantRetainedNumeric128",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows256Bits128.Dominant.Soundness.ThresholdDominantRetainedRatio128",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows256Bits128.Near.Soundness.ThresholdNearCoarseVerified128",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows256Bits128.Near.Replay.ThresholdNearChordEndpointsVerified128",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows256Bits128.Near.Soundness.ThresholdNearChordCurvatureCover128",
+  "CertifiedJL.Projection.L2.Lower.BalancedTernary.Regimes.Diffuse.LowScalar",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Diffuse.Soundness.LowModularTail128",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Diffuse.Soundness.HighEndpoints128",
+]
+
+[[family]]
+id = "ternary-threshold-lower-192-bits128"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows192-bits128",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows192-bits128",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows192-bits128",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows192-bits128",
+  "l2-threshold-lower-ternary-near-final-ratio-rows192-bits128",
+  "l2-threshold-lower-ternary-diffuse-final-ratio-rows192-bits128",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover192Bits128",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.FourierCovers192Bits128",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows192Bits128.Soundness.ThresholdRatios192Bits128",
+]
+
+[[family]]
+id = "ternary-threshold-lower-256-bits192"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows256-bits192",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows256-bits192",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows256-bits192",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows256-bits192",
+  "l2-threshold-lower-ternary-near-final-ratio-rows256-bits192",
+  "l2-threshold-lower-ternary-diffuse-final-ratio-rows256-bits192",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover256Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.CappedFourierCover256Bits192Selector",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.SingletonPhaseFourierCover256Bits192Selector",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows256Bits192.Soundness.ThresholdRatios256Bits192",
+]
+
+[[family]]
+id = "ternary-threshold-lower-384-bits192"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows384-bits192",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows384-bits192",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows384-bits192",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows384-bits192",
+  "l2-threshold-lower-ternary-near-final-ratio-rows384-bits192",
+  "l2-threshold-lower-ternary-diffuse-final-ratio-rows384-bits192",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover384Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.CappedFourierCover384Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.SingletonFourierCover384Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows384Bits192.Soundness.ThresholdRatios384Bits192",
+]
+
+[[family]]
+id = "ternary-threshold-lower-512-bits192"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows512-bits192",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows512-bits192",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows512-bits192",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows512-bits192",
+  "l2-threshold-lower-ternary-near-final-ratio-rows512-bits192",
+  "l2-threshold-lower-ternary-diffuse-final-ratio-rows512-bits192",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover512Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.CappedFourierCover512Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.SingletonFourierCover512Bits192",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows512Bits192.Soundness.ThresholdRatios512Bits192",
+]
+
+[[family]]
+id = "ternary-threshold-lower-512-floor73-bits193"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows512-floor73-bits193",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows512-floor73-bits193",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows512-floor73-bits193",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows512-floor73-bits193",
+  "l2-threshold-lower-ternary-near-final-ratio-rows512-floor73-bits193",
+  "l2-threshold-lower-ternary-diffuse-endpoints-rows512-floor73-bits193",
+  "l2-threshold-lower-ternary-diffuse-final-ratio-rows512-floor73-bits193",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover512Floor73Bits193",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.CappedFourierCover512Floor73Bits193",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.SingletonFourierCover512Floor73Bits193",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Diffuse.Soundness.Floor73Endpoints",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows512Floor73Bits193.Soundness.ThresholdRatios512Floor73Bits193",
+]
+
+[[family]]
+id = "ternary-threshold-lower-512-bits256"
+certificate_ids = [
+  "l2-threshold-lower-ternary-dominant-direct-cover-rows512-bits256",
+  "l2-threshold-lower-ternary-dominant-capped-fourier-cover-rows512-bits256",
+  "l2-threshold-lower-ternary-dominant-singleton-fourier-cover-rows512-bits256",
+  "l2-threshold-lower-ternary-dominant-final-ratio-rows512-bits256",
+  "l2-threshold-lower-ternary-near-final-ratio-rows512-bits256",
+  "l2-threshold-lower-ternary-diffuse-final-ratio-rows512-bits256",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.ConstantDirectCover512Bits256",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.CappedFourierCover512Bits256",
+  "CertifiedJL.Certificates.Families.L2Lower.Shared.Dominant.Replay.SingletonFourierCover512Bits256",
+  "CertifiedJL.Certificates.Families.L2Lower.Rows512Bits256.Soundness.ThresholdRatios512Bits256",
+]
+
+[[family]]
+id = "ternary-linf-two-decimal-majorants"
+certificate_ids = [
+  "linf-lower-ternary-cap24-central-majorant",
+  "linf-lower-ternary-cap24-diffuse-majorant",
+  "linf-lower-ternary-cap34-central-majorant",
+  "linf-lower-ternary-cap34-diffuse-majorant",
+  "linf-lower-ternary-cap42-central-majorant",
+  "linf-lower-ternary-cap42-diffuse-majorant",
+  "linf-lower-ternary-cap47-central-majorant",
+  "linf-lower-ternary-cap47-diffuse-majorant",
+]
+replay_roots = [
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap24Central.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap24Diffuse.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap34Central.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap34Diffuse.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap42Central.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap42Diffuse.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap47Central.Verified",
+  "CertifiedJL.Certificates.Families.LInfLower.TwoDecimal.Replay.Cap47Diffuse.Verified",
+]

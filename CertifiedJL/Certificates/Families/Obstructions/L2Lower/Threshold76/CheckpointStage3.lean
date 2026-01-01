@@ -1,0 +1,17 @@
+/-
+Copyright (c) 2026 Anonymous Author. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Anonymous Author
+-/
+
+import CertifiedJL.Certificates.Families.Obstructions.L2Lower.Threshold76.CheckpointData3
+
+namespace CertifiedJL.ThresholdLower76
+
+open FixedPointConvolution
+
+theorem packedState3_eq_checkpoint : packedState 3 = packedState3Checkpoint := by
+  set_option maxRecDepth 100000 in
+  decide +kernel
+
+end CertifiedJL.ThresholdLower76

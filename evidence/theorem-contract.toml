@@ -1,0 +1,362 @@
+schema_version = 2
+
+# The result catalog is the readable source of exact result statements.  This
+# canonical digest changes if any advertised constant, hypothesis, event,
+# budget, Lean declaration, owner, paper locator, certificate dependency, or
+# verification class changes.  TOML layout and comments do not affect it.
+[certified_results]
+inventory = "evidence/result-catalog.toml"
+semantic_hash = "sha256-canonical-json-v1"
+semantic_sha256 = "557e0135de86d1e822d6e76465e1ff698828486752f06d080b22777022301edf"
+public_canaries = "evidence/public-api.toml"
+certificate_dependencies = "evidence/certificates/public-results.toml"
+replay_plan = "evidence/certificates/replay-families.toml"
+
+[substantive_claims]
+semantic_hash = "sha256-canonical-json-v1"
+semantic_sha256 = "06f9258b98283b05bf11b16528743e11178f37ec295c6c386fc7934751883dcb"
+
+[counterexample_evidence]
+families = "evidence/counterexamples/families.toml"
+witnesses = "evidence/counterexamples/witnesses.toml"
+comparisons = "evidence/counterexamples/comparisons.toml"
+generated_markdown = "docs/counterexample-coverage.md"
+generated_tsv = "docs/counterexample-coverage.tsv"
+semantic_hash = "sha256-canonical-json-v1"
+semantic_sha256 = "cdeba556c80cba437df48d10d5c964c6894b2dedc03c42b298f548f0ee804b0d"
+
+[headline_results]
+result_ids = [
+  "rows256-ternary-l2-threshold-lower-29-bits128",
+  "rows256-ternary-affine-l2-threshold-lower-27-bits128",
+  "rows256-ternary-linf-threshold-lower-21-over-50-bits133",
+  "rows256-ternary-affine-linf-threshold-lower-67-over-200-bits130",
+  "rows256-ternary-l2-upper-338-bits128",
+  "rows256-ternary-linf-upper-39-over-4-bits133",
+]
+
+[paper_parameters]
+rows = 256
+security_bits = 128
+orthus_security_bits = 133
+ternary_lower = 29
+ternary_upper = 338
+ternary_threshold_margin_numerator = 3
+ternary_threshold_margin_denominator = 1
+ternary_upper_disproved = 336
+orthus_infinity_numerator = 21
+orthus_infinity_denominator = 50
+orthus_threshold_margin_numerator = 2
+orthus_threshold_margin_denominator = 1
+orthus_extraction_slack_numerator = 325
+orthus_extraction_slack_denominator = 14
+orthus_modulus_coefficient_numerator = 325
+orthus_modulus_coefficient_denominator = 7
+
+[application_boundaries]
+modular_lower_threshold_domain = "positive natural numbers; odd modulus"
+euclidean_lower_event = "strict_lt; closed real acceptance is supplied with explicit strict headroom, including a real-input-threshold adapter by odd scaling"
+structured_and_layered_adapter = "supplied for a history-selected input and shift fixed before a fresh matrix, real L2 thresholds, and finite call sets; invalid histories retain a separate budget term"
+orthus_extraction_threshold = "max(1,ceil(50*A/21)) for every A>=0, with 2*max(1,ceil(50*A/21))<=q; 325/14 is the unrounded ratio for positive A=(39/4)B"
+
+# Substantive negative results are explicit because they do not live in the
+# positive result catalog.  Empty Lean/canary fields mean proof work is still
+# outstanding; a nearby or external computation is never promoted silently.
+
+[[claim]]
+id = "orthus-printed-infinity-counterexample"
+role = "negative_result"
+statement = "For the Orthus two-coordinate shape, exactly 14 of 16 row seeds pass, so the 256-row closed infinity event has probability (7/8)^256 > 2^-128. The witness b=31, every positive odd q>=2821, and w=(22,22) meets the printed hypotheses."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:orthus-infinity-counterexample"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Counterexamples.OrthusPrintedParameters.printedParameterBridge"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/OrthusPrintedParameters.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/LiteratureCounterexamples.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/LiteratureCounterexamples.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "linf-threshold-margin-one-obstruction"
+role = "negative_result"
+statement = "At q=b=3 and the all-ones vector in dimension 9, every 256-row balanced-ternary matrix satisfies the exact closed 21/50 threshold event. Thus no 130-bit threshold lower-tail theorem at cap 21/50 can use integer modulus margin one."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:linf-margin-one"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.ternaryLInfThresholdMarginOneBits130False"
+analytic_owner = "CertifiedJL/Obstructions/Lightweight.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "linf-threshold-rows192-cap34-bits183-obstruction"
+role = "negative_result"
+statement = "At q=7, d=6, b=3, and w=(1,1,1,1,1,2), exactly 2116 of 4096 row seeds satisfy the 17/50 cap, so the 192-row pass probability (529/1024)^192 exceeds 2^-183."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:linf-rows192-cap34-bits183"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.ternaryLInfThresholdRows192Cap34Bits183False"
+analytic_owner = "CertifiedJL/Obstructions/Lightweight.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/PublicAPI.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/PublicAPI.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-threshold-rows192-floor12-bits132-obstruction"
+role = "negative_result"
+statement = "At q=301, d=2, b=100, and w=(100,1), the strict 192-row balanced-ternary modular squared-norm event below 12*b^2 has probability greater than 2^-132."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:l2-threshold-rows192-floor12-bits132"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.ternaryL2ThresholdRows192Floor12Bits132False"
+analytic_owner = "CertifiedJL/Obstructions/Lightweight.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/PublicAPI.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/PublicAPI.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows192-threshold287-bits130-obstruction"
+role = "negative_result"
+statement = "At d=10^16, q=2d+1, and the all-ones vector, the strict 192-row balanced-ternary modular L2 upper event above 287 times the input squared norm has probability greater than 2^-130."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:l2-upper-rows192-threshold287-bits130"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.ternaryL2UpperRows192Threshold287Bits130False"
+analytic_owner = "CertifiedJL/Obstructions/Lightweight.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/PublicAPI.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/PublicAPI.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "linf-upper-rows192-threshold487-over-50-bits134-obstruction"
+role = "negative_result"
+statement = "At d=250000, q=500001, and the all-ones vector, the strict 192-row balanced-ternary modular LInf upper event above 487/50 times the input Euclidean norm has probability greater than 2^-134."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:linf-upper-rows192-487-over-50-bits134"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.ternaryLInfUpperRows192Threshold487Over50Bits134False"
+analytic_owner = "CertifiedJL/Obstructions/Lightweight.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/PublicAPI.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/PublicAPI.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-threshold-rows512-floor76-bits192-obstruction"
+role = "negative_result"
+statement = "At q=27, d=81, b=9, and the all-ones vector, the strict 512-row balanced-ternary modular squared-norm event below 76*b^2 has probability greater than 2^-192."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:threshold-lower-512-floor-76"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.thresholdLower512Bits192Floor76Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/ThresholdLower76.lean"
+certificate_dependencies = ["CertifiedJL/Certificates/Families/Obstructions/L2Lower/Threshold76/Verified.lean"]
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanaries.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanaries.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-threshold-rows512-at-least76-bits192-obstruction"
+role = "negative_result"
+statement = "Every threshold-relative integer squared-norm floor at least 76 is false for the uniform 512-row balanced-ternary theorem at failure budget 2^-192."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "cor:threshold-lower-512-at-least-76"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Bits192AtLeast76False"
+analytic_owner = "CertifiedJL/Obstructions.lean"
+certificate_dependencies = ["CertifiedJL/Certificates/Families/Obstructions/L2Lower/Threshold76/Verified.lean"]
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanaries.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanaries.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows256-threshold336-bits128-obstruction"
+role = "negative_result"
+statement = "At q=2^32-99 and the nonzero all-ones vector of dimension 46340^2, the 256-row balanced-ternary strict upper-failure probability at threshold 336 exceeds (69/50)2^-128."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:sparse-upper-336-counterexample"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.ternaryUpper336Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Upper.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows256-threshold338-bits130-obstruction"
+role = "negative_result"
+statement = "At q=2^32-99 and the nonzero all-ones vector of dimension 46340^2, the 256-row balanced-ternary strict upper-failure probability at threshold 338 exceeds (3/2)2^-130."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:sparse-upper-338-bits-130-counterexample"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.ternaryUpper338Bits130Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Upper/SecurityCeiling.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "dense-sign-threshold29-concrete-obstruction"
+role = "negative_result"
+statement = "For q=2001, b=667, w=(1000,1000), and every 256-row dense-sign seed, the centered modular squared norm is below 29*b^2; the input is centered and satisfies b^2 <= sqNorm(w) and 3b <= q."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:dense-sign-threshold-obstruction"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Obstructions.denseSignThreshold29FailsForEverySeed"
+analytic_owner = "CertifiedJL/Obstructions/Lightweight.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "lnp-kappa-one-counterexample"
+role = "negative_result"
+statement = "For w=(1) and 256 independent Bin_1 rows, the projection-squared-norm-below-13 probability equals 2^-256 times sum choose(256,k), k=0,...,12, and exceeds 2^-256."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:lnp-kappa-one-counterexample"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Counterexamples.LNPLowerTail.kappaOnePrintedCounterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/LiteratureCounterexamples.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/LiteratureCounterexamples.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "lnp-kappa-two-counterexample"
+role = "negative_result"
+statement = "For q=41, d=b=1, w=(1), and 256 independent Bin_2 rows, the printed hypotheses hold but the modular-projection-squared-norm-below-26 probability exceeds 2^-256."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:lnp-kappa-two-counterexample"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Counterexamples.LNPLowerTail.lemmaTwoTenCounterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/LiteratureCounterexamples.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/LiteratureCounterexamples.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-threshold-rows256-floor30-bits128-obstruction"
+role = "negative_result"
+statement = "For q=2^32-99, b=1000, and w=(1000,1), the centered threshold-relative strict event ||ctr_q(Jw)||_2^2 < 30*b^2 has probability greater than 2^-127 for 256 balanced-ternary rows. The witness satisfies both q>=3b and q>=125b, so floor 30 is false at a 128-bit budget under either margin."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:l2-lower-floor30-counterexample"
+verification_class = "replay_pending"
+lean = "CertifiedJL.Counterexamples.TernaryL2Rows256Floor30.admissible_witness"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/TernaryL2Rows256Floor30.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-threshold-rows256-floor31-bits128-obstruction"
+role = "negative_result"
+statement = "For every positive b and odd q>=3b, the singleton w=(b) has strict lower-failure probability Pr[Binomial(256,1/2)<=30] = 1308166590463983241201143759614411993969/2^256 > 2^-128 at floor 31."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "STATUS[tightness-l2-lower-31]"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Counterexamples.TernaryL2Rows256Floor31.admissible_family"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/TernaryL2Rows256Floor31.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "linf-threshold-rows256-cap-one-half-bits128-every-margin-obstruction"
+role = "negative_result"
+statement = "For every fixed positive modulus margin, suitable positive k and odd q>8k with w=k(1,1,1,1), b=2k give exact closed row-pass probability 182/256 and 256-row probability (182/256)^256 > 2^-128 at cap 1/2."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "STATUS[tightness-linf-lower-half]"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Counterexamples.TernaryLInfRows256CapHalf.realMargin_admissible_family"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/LInf/TernaryLInfRows256CapHalf.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows256-threshold404-bits192-obstruction"
+role = "negative_result"
+statement = "At d=10^16, q=2d+1, and the all-ones vector, the strict 256-row balanced-ternary modular L2 upper event above 404 times the input squared norm has probability greater than 2^-192."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "tag{L1}"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.ternaryL2UpperRows256Threshold404Bits192Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows256Upper404Bits192.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "paper/artifact/upper-gap/verify_high_security_upper_obstructions.py", "scripts/check_trust.py"]
+external_evidence = ["paper/artifact/upper-gap/verify_high_security_upper_obstructions.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows384-threshold507-bits192-obstruction"
+role = "negative_result"
+statement = "At d=10^16, q=2d+1, and the all-ones vector, the strict 384-row balanced-ternary modular L2 upper event above 507 times the input squared norm has probability greater than 2^-192."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "tag{L1}"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.ternaryL2UpperRows384Threshold507Bits192Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows384Upper507Bits192.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "paper/artifact/upper-gap/verify_high_security_upper_obstructions.py", "scripts/check_trust.py"]
+external_evidence = ["paper/artifact/upper-gap/verify_high_security_upper_obstructions.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows512-threshold605-bits192-obstruction"
+role = "negative_result"
+statement = "At d=10^16, q=2d+1, and the all-ones vector, the strict 512-row balanced-ternary modular L2 upper event above 605 times the input squared norm has probability greater than 2^-192."
+paper_source = "sections/certified-jl/appendix_g_parameter_families.tex"
+paper_locator = "thm:high-security-l2-upper"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.ternaryL2UpperRows512Threshold605Bits192Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows512Upper605Bits192.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "paper/artifact/upper-gap/verify_high_security_upper_obstructions.py", "scripts/check_trust.py"]
+external_evidence = ["paper/artifact/upper-gap/verify_high_security_upper_obstructions.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "l2-upper-rows512-threshold678-bits256-obstruction"
+role = "negative_result"
+statement = "At d=10^16, q=2d+1, and the all-ones vector, the strict 512-row balanced-ternary modular L2 upper event above 678 times the input squared norm has probability greater than 2^-256."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "tag{L1}"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.ternaryL2UpperRows512Threshold678Bits256Counterexample"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows512Upper678Bits256.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "paper/artifact/upper-gap/verify_high_security_upper_obstructions.py", "scripts/check_trust.py"]
+external_evidence = ["paper/artifact/upper-gap/verify_high_security_upper_obstructions.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []
+
+[[claim]]
+id = "dense-sign-universal-threshold-obstruction"
+role = "negative_result"
+statement = "For every natural row count m and positive real modulus-margin and lower-threshold constants M,c, some positive odd q, centered w=(a,a), and positive natural b satisfy b^2<=sqNorm(w), M*b<=q, and every m-row dense-sign matrix has modular squared norm below c*b^2."
+paper_source = "sections/certified-jl/appendix_h_counterexamples.tex"
+paper_locator = "prop:dense-sign-threshold-obstruction"
+verification_class = "kernel_checked"
+lean = "CertifiedJL.Counterexamples.DenseSignThreshold.universal_real_threshold_failure"
+analytic_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/DenseSignThreshold.lean"
+certificate_dependencies = []
+validation_evidence = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+public_canary = "CertifiedJL/Tests/ObstructionCanariesFast.lean"
+outstanding_dependencies = []

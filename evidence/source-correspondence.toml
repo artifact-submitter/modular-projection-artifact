@@ -1,0 +1,91 @@
+schema_version = 1
+
+# This ledger contains bibliographic correspondence only. Mathematical result
+# identity is defined by evidence/result-catalog.toml.
+
+[[source]]
+id = "ghl-2021-1397"
+title = "A New Approach to Practical Active-Secure Two-Party Computation"
+locator = "https://eprint.iacr.org/2021/1397"
+scope = "The heuristic balanced-ternary 256-row Euclidean window 30/337 and the dimension-dependent modular lower condition b <= q/(45d)."
+result_ids = [
+  "rows256-ternary-l2-threshold-lower-29-bits128",
+  "rows256-ternary-l2-upper-338-bits128",
+]
+
+[[source]]
+id = "labrador-2022-1341"
+title = "LaBRADOR: Compact Proofs for R1CS from Module-SIS"
+locator = "https://eprint.iacr.org/2022/1341"
+scope = "The heuristic 256-row Euclidean window 30/337, dimension-free modular margin 125, and its use at the published squared acceptance radius 128."
+result_ids = [
+  "rows256-ternary-l2-threshold-lower-29-bits128",
+  "rows256-ternary-l2-upper-338-bits128",
+]
+
+[[source]]
+id = "lnp22-2022-284"
+title = "Lattice-Based Zero-Knowledge Proofs and Applications: Shorter, Simpler, and More General"
+locator = "https://eprint.iacr.org/2022/284"
+scope = "Lemma 2.9 states a fixed-mask Bin_1 projection bound at 256 rows, strict squared floor 26/4, failure 2^-128, and margin 41d. Its argument depends on heuristic Lemma 2.8 through Lemma 2.10 (Bin_2). Our matched balanced-ternary theorem removes that heuristic premise and improves the endpoint to 27. Separate one-coordinate counterexamples refute both the Bin_1 and Bin_2 lower claims in Lemma 2.8 and the modular Lemma 2.10. They do not refute the masked conclusion."
+result_ids = [
+  "rows256-ternary-affine-l2-threshold-lower-27-bits128",
+]
+
+[[source]]
+id = "pikkufold-2026-1809"
+title = "PikkuFold"
+locator = "https://eprint.iacr.org/2026/1809"
+scope = "Related modular Johnson-Lindenstrauss parameter analysis."
+result_ids = [
+  "rows192-ternary-l2-threshold-lower-12-bits128",
+  "rows192-ternary-l2-upper-287-bits128",
+  "rows256-ternary-l2-threshold-lower-29-bits128",
+  "rows256-ternary-l2-threshold-lower-9-bits192",
+  "rows384-ternary-l2-threshold-lower-43-bits192",
+  "rows512-ternary-l2-threshold-lower-73-bits192",
+  "rows512-ternary-l2-threshold-lower-57-bits256",
+  "rows256-ternary-l2-upper-338-bits128",
+]
+
+[[source]]
+id = "orthus"
+title = "Orthus"
+locator = "paper bibliography key: orthus"
+scope = "Application of one-row and modular infinity-norm projection bounds."
+result_ids = [
+  "rows192-ternary-linf-threshold-lower-17-over-50-bits129",
+  "rows256-ternary-linf-threshold-lower-6-over-25-bits197",
+  "rows256-ternary-linf-threshold-lower-21-over-50-bits133",
+  "rows384-ternary-linf-threshold-lower-21-over-50-bits200",
+  "rows512-ternary-linf-threshold-lower-47-over-100-bits206",
+  "rows512-ternary-linf-threshold-lower-21-over-50-bits266",
+]
+
+[[source]]
+id = "rokoko-2026-575"
+title = "RoKoko"
+locator = "https://eprint.iacr.org/2026/575"
+scope = "Structured and transcript-conditioned uses of LaBRADOR-style Euclidean projection bounds; substitution also requires the real-threshold, history, and finite-call adapters recorded in the public API."
+result_ids = [
+  "rows256-ternary-l2-threshold-lower-29-bits128",
+  "rows256-ternary-l2-upper-338-bits128",
+  "rows264-ternary-affine-l2-threshold-lower-29-bits128",
+]
+
+[[source]]
+id = "succinct-lattice-zk-toolkit-2026-1289"
+title = "A Toolkit for Succinct Lattice-Based Zero Knowledge Proofs"
+locator = "https://eprint.iacr.org/2026/1289"
+scope = "The fixed-mask infinity-norm projection premise at cap 67/200 and 256 rows; the affine result gives 130 bits under modulus margin three, without certifying the full protocol."
+result_ids = ["rows256-ternary-affine-linf-threshold-lower-67-over-200-bits130"]
+
+[[source]]
+id = "lazer-crypto-2024-1846"
+title = "LaZer: A Lattice-Based Zero-Knowledge Proof System"
+locator = "https://eprint.iacr.org/2024/1846"
+scope = "A balanced-ternary LaBRADOR backend with LNP-style masking; the applicable theorem depends on whether protocol algebra cancels the mask before the fresh matrix. No end-to-end performance claim is recorded."
+result_ids = [
+  "rows256-ternary-affine-l2-threshold-lower-27-bits128",
+  "rows256-ternary-affine-linf-threshold-lower-67-over-200-bits130",
+]

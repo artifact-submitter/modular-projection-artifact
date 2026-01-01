@@ -1,0 +1,152 @@
+schema_version = 1
+
+[[family]]
+id = "l2-lower"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+event_comparison = "strict_lt"
+input_domain = "centered_integer_vector"
+modulus_domain = "positive_odd"
+threshold_reference = "public_input_threshold_squared"
+mask_model = "zero"
+canonical_research_family = "ternary-l2-lower"
+reduction_rule_ids = ["lower-negative-margin-region", "masked-lower-zero-mask", "row-restriction"]
+
+[[family]]
+id = "masked-l2-lower"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+event_comparison = "strict_lt"
+input_domain = "centered_integer_vector"
+modulus_domain = "positive_odd"
+threshold_reference = "public_input_threshold_squared"
+mask_model = "integer_vector_fixed_before_matrix"
+canonical_research_family = "ternary-masked-l2-lower"
+reduction_rule_ids = ["masked-lower-zero-mask", "four-ninths", "row-restriction"]
+
+[[family]]
+id = "linf-lower"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+event_comparison = "closed_le"
+input_domain = "centered_integer_vector"
+modulus_domain = "positive_odd"
+threshold_reference = "public_input_threshold"
+mask_model = "zero"
+canonical_research_family = "ternary-linf-lower"
+reduction_rule_ids = ["lower-negative-margin-region", "coordinate-lower-product", "masked-lower-zero-mask"]
+
+[[family]]
+id = "masked-linf-lower"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+event_comparison = "closed_le"
+input_domain = "centered_integer_vector"
+modulus_domain = "positive_odd"
+threshold_reference = "public_input_threshold"
+mask_model = "integer_vector_fixed_before_matrix"
+canonical_research_family = "ternary-masked-linf-lower"
+reduction_rule_ids = ["masked-lower-zero-mask", "coordinate-lower-product", "coordinate-scaling"]
+
+[[family]]
+id = "l2-upper"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+event_comparison = "strict_gt"
+input_domain = "integer_vector"
+modulus_domain = "natural_unrestricted"
+threshold_reference = "input_squared_norm"
+mask_model = "zero_or_additive_radius"
+canonical_research_family = "ternary-l2-upper"
+reduction_rule_ids = ["upper-mask-optimum", "upper-nonmodular-reduction", "row-restriction"]
+
+[[family]]
+id = "linf-upper"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+event_comparison = "strict_gt"
+input_domain = "integer_vector"
+modulus_domain = "natural_unrestricted"
+threshold_reference = "input_euclidean_norm"
+mask_model = "zero_or_additive_radius"
+canonical_research_family = "ternary-linf-upper"
+reduction_rule_ids = ["upper-mask-optimum", "upper-nonmodular-reduction", "coordinate-upper-product"]
+
+[[rule]]
+id = "lower-negative-margin-region"
+kind = "negative_parameter_region"
+reference = "witness admissibility q/b; no fixed-input modulus monotonicity"
+proof_status = "checked_arithmetic"
+
+[[rule]]
+id = "masked-lower-zero-mask"
+kind = "event_specialization"
+reference = "zero mask is an allowed universal-mask instance"
+proof_status = "reviewed_semantic_rule"
+
+[[rule]]
+id = "upper-mask-optimum"
+kind = "optimization_equivalence"
+reference = "exact reverse zero-mask equivalences for additive-radius upper schemas"
+lean_declarations = ["CertifiedJL.affineL2UpperTailAt_iff", "CertifiedJL.affineLInfUpperTailAt_iff"]
+proof_status = "lean_checked_replay_pending"
+verification_class = "replay_pending"
+
+[[rule]]
+id = "upper-nonmodular-reduction"
+kind = "finite_witness_reduction"
+reference = "contraction and sufficiently large odd modulus for each finite witness"
+proof_status = "reviewed_semantic_rule"
+
+[[rule]]
+id = "coordinate-lower-product"
+kind = "independent_rows"
+reference = "exact all-row products for varying and identical fixed masks"
+lean_declarations = ["CertifiedJL.sparseRademacherMatrix_eventProbability_allRows_eq_prod", "CertifiedJL.sparseRademacherMatrix_eventProbability_allRows_eq_pow"]
+proof_status = "lean_checked"
+verification_class = "kernel_checked"
+
+[[rule]]
+id = "coordinate-upper-product"
+kind = "independent_rows"
+reference = "exact some-row complements for varying and identical events"
+lean_declarations = ["CertifiedJL.sparseRademacherMatrix_eventProbability_someRow_eq_one_sub_prod", "CertifiedJL.sparseRademacherMatrix_eventProbability_someRow_eq_one_sub_pow"]
+generic_lean_declaration = "CertifiedJL.eventProbability_iIndepFun_exists_eq_one_sub_prod"
+proof_status = "lean_checked_replay_pending"
+verification_class = "replay_pending"
+
+[[rule]]
+id = "four-ninths"
+kind = "positive_transport"
+reference = "AffineL2ThresholdLowerTailAt.fourNinths"
+proof_status = "lean_checked"
+
+[[rule]]
+id = "coordinate-scaling"
+kind = "positive_transport"
+reference = "existing coordinate scaling adapters"
+proof_status = "lean_checked"
+
+[[rule]]
+id = "row-restriction"
+kind = "positive_transport"
+reference = "existing row-restriction transports"
+proof_status = "lean_checked"
+
+[[rule]]
+id = "budget-strengthening-negative"
+kind = "negative_budget_transport"
+reference = "p > 2^-s implies p > 2^-t for t >= s"
+proof_status = "checked_arithmetic"
+
+[[rule]]
+id = "singleton-binomial-specialization"
+kind = "negative_family_specialization"
+reference = "CertifiedJL.Obstructions.ternaryL2SingletonThresholdFalseOfScaled"
+proof_status = "lean_checked_replay_pending"

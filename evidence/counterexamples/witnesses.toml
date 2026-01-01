@@ -1,0 +1,214 @@
+schema_version = 1
+
+[[witness]]
+id = "ternary-ones16-q9-b4"
+purpose = "parameter_bound"
+family = "l2-lower"
+row_law = "balanced_ternary"
+constructor = "constant_vector"
+dimension = 16
+vector_value = 1
+rows = 256
+public_threshold_numerator = "4"
+public_threshold_denominator = "1"
+modulus = 9
+mask_constructor = "zero"
+recipe = "energy_convolution"
+energy_values = [0, 1, 4, 9, 16]
+energy_weights = ["607812102", "1154294424", "999371554", "823843664", "709645552"]
+event_comparison = "strict_lt"
+event_cutoff_numerator = "464"
+event_cutoff_denominator = "1"
+probability_relation = "strict_gt"
+budget_bits = 128
+attained = true
+admissible_multiplier_max_numerator = "9"
+admissible_multiplier_max_denominator = "4"
+admissible_multiplier_max_included = true
+mathematical_evidence = "exact_external"
+mathematical_verification_class = "external_exact_artifact"
+lean_implementation = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor29MarginAtMostNineFourthsBits128False"
+lean_specialization = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor29MarginTwoBits128False"
+lean_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/TernaryL2Rows256MarginTwo.lean"
+lean_source_commit = "withheld-for-anonymous-review"
+verification_class = "replay_pending"
+lean_axioms = ["propext", "Classical.choice", "Quot.sound"]
+lean_validation_references = ["focused q9 module PASS (~11s)", "CertifiedJL.Obstructions.Lightweight PASS", "CertifiedJL/Tests/ObstructionCanariesFast.lean PASS"]
+validation_references = ["scripts/check_three_axis_witnesses.py", "scripts/test_counterexample_probability.py"]
+artifact_paths = ["evidence/counterexamples/searches/q9-margin.toml", "evidence/counterexamples/searches/q9-margin.json"]
+artifact_sha256 = ["d464a4e3791a31a211b7b67eb05ea6c238dc9564bb609fcd410530b2facc043d", "d7715976c9101099c3d0ba07d8ea6311d99634a56530955075f4f33adc03a312"]
+
+[[witness]]
+id = "ternary-singleton-binomial"
+purpose = "parameter_bound"
+family = "l2-lower"
+row_law = "balanced_ternary"
+constructor = "singleton"
+dimension = 1
+rows = 256
+public_threshold_numerator = "31"
+public_threshold_denominator = "1"
+modulus_domain = "every positive odd q with q >= 3b"
+mask_constructor = "zero"
+recipe = "binomial_cdf"
+binomial_trials = 256
+binomial_successes_max = 30
+exact_probability_numerator = "1308166590463983241201143759614411993969"
+exact_probability_denominator = "115792089237316195423570985008687907853269984665640564039457584007913129639936"
+event_comparison = "strict_lt"
+probability_relation = "strict_gt"
+budget_bits = 128
+attained = true
+parameter_domain = "positive integer b; odd q >= 3b"
+mathematical_evidence = "lean_exact"
+lean_implementation = "CertifiedJL.Counterexamples.TernaryL2Rows256Floor31.admissible_family"
+verification_class = "kernel_checked"
+validation_references = ["CertifiedJL/Tests/ObstructionCanariesFast.lean", "scripts/check_trust.py"]
+claim_ids = ["l2-threshold-rows256-floor31-bits128-obstruction"]
+generic_lean_implementation = "CertifiedJL.Obstructions.ternaryL2SingletonThresholdFalseOfScaled"
+derived_lean_declarations = ["CertifiedJL.Obstructions.ternaryL2ThresholdRows192Floor14Bits128False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor13Bits192False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows384Floor45Bits192False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Floor59Bits256False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor29Bits132False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor9Bits208False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows384Floor43Bits197False", "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Floor57Bits261False"]
+derived_lean_owner = "CertifiedJL/Projection/Counterexamples/L2Lower/TernaryL2Rows256Floor31.lean"
+derived_lean_source_commit = "withheld-for-anonymous-review"
+derived_verification_class = "replay_pending"
+derived_lean_axioms = ["propext", "Classical.choice", "Quot.sound"]
+derived_validation_references = ["focused singleton module PASS", "CertifiedJL/Tests/ObstructionCanariesFast.lean PASS"]
+
+[[witness]]
+id = "ternary-linf-margin-one-family"
+purpose = "parameter_bound"
+family = "linf-lower"
+row_law = "balanced_ternary"
+constructor = "constant_vector"
+dimension = 9
+rows = 256
+public_threshold_numerator = "3"
+public_threshold_denominator = "1"
+modulus = 3
+mask_constructor = "zero"
+recipe = "probability_one"
+event_comparison = "closed_le"
+probability_relation = "equal"
+budget_bits = 130
+attained = true
+parameter_domain = "every natural row count, every coordinate cap at least 1/3, and every target budget at most 1"
+mathematical_evidence = "lean_exact_specialization_plus_checked_generalization"
+lean_implementation = "CertifiedJL.Obstructions.ternaryLInfThresholdMarginOneFamilyFalse"
+verification_class = "replay_pending"
+validation_references = ["CertifiedJL/Tests/ObstructionCanariesFast.lean"]
+claim_ids = ["linf-threshold-margin-one-obstruction"]
+
+# The following promoted witness families point to already-reviewed claim
+# evidence.  They avoid copying theorem statements while giving comparisons a
+# reusable mathematical/Lean/validation identity.
+[[witness]]
+id = "orthus-two-coordinate"
+purpose = "literature_refutation"
+category = "literature_refutation"
+row_law = "orthus_two_coordinate"
+constructor = "explicit_vector"
+recipe = "coordinate_product"
+claim_ids = ["orthus-printed-infinity-counterexample"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-linf-cap34"
+purpose = "parameter_bound"
+family = "linf-lower"
+row_law = "balanced_ternary"
+constructor = "explicit_vector"
+recipe = "coordinate_product"
+claim_ids = ["linf-threshold-rows192-cap34-bits183-obstruction"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-l2-floor12"
+purpose = "parameter_bound"
+family = "l2-lower"
+row_law = "balanced_ternary"
+constructor = "explicit_vector"
+recipe = "energy_convolution"
+claim_ids = ["l2-threshold-rows192-floor12-bits132-obstruction"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-high-dimensional-upper"
+purpose = "parameter_bound"
+family = "l2-upper"
+row_law = "balanced_ternary"
+constructor = "parameterized_all_ones"
+recipe = "finite_comparison_bound"
+claim_ids = ["l2-upper-rows192-threshold287-bits130-obstruction", "l2-upper-rows256-threshold404-bits192-obstruction", "l2-upper-rows384-threshold507-bits192-obstruction", "l2-upper-rows512-threshold605-bits192-obstruction", "l2-upper-rows512-threshold678-bits256-obstruction"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-high-dimensional-linf-upper"
+purpose = "parameter_bound"
+family = "linf-upper"
+row_law = "balanced_ternary"
+constructor = "constant_vector"
+recipe = "finite_comparison_bound"
+claim_ids = ["linf-upper-rows192-threshold487-over-50-bits134-obstruction"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-floor76-family"
+purpose = "parameter_bound"
+family = "l2-lower"
+row_law = "balanced_ternary"
+constructor = "constant_vector"
+recipe = "energy_convolution"
+claim_ids = ["l2-threshold-rows512-floor76-bits192-obstruction", "l2-threshold-rows512-at-least76-bits192-obstruction"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-sparse-upper-security"
+purpose = "parameter_bound"
+family = "l2-upper"
+row_law = "balanced_ternary"
+constructor = "constant_vector"
+recipe = "finite_comparison_bound"
+claim_ids = ["l2-upper-rows256-threshold336-bits128-obstruction", "l2-upper-rows256-threshold338-bits130-obstruction"]
+verification_class = "kernel_checked"
+exact_factor_338_numerator = "3"
+exact_factor_338_denominator = "2"
+exact_factor_338_budget_bits = 130
+
+[[witness]]
+id = "dense-sign-universal-family"
+purpose = "structural_impossibility"
+category = "structural_impossibility"
+row_law = "dense_sign"
+constructor = "parameterized_constructor"
+recipe = "probability_one"
+claim_ids = ["dense-sign-threshold29-concrete-obstruction", "dense-sign-universal-threshold-obstruction"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "lnp-binomial-families"
+purpose = "literature_refutation"
+category = "literature_refutation"
+row_law = "binomial_lnp"
+constructor = "singleton"
+recipe = "binomial_cdf"
+claim_ids = ["lnp-kappa-one-counterexample", "lnp-kappa-two-counterexample"]
+verification_class = "kernel_checked"
+
+[[witness]]
+id = "ternary-floor30"
+purpose = "parameter_bound"
+family = "l2-lower"
+row_law = "balanced_ternary"
+constructor = "explicit_vector"
+recipe = "energy_convolution"
+claim_ids = ["l2-threshold-rows256-floor30-bits128-obstruction"]
+verification_class = "replay_pending"
+
+[[witness]]
+id = "ternary-linf-cap-half"
+purpose = "parameter_bound"
+family = "linf-lower"
+row_law = "balanced_ternary"
+constructor = "parameterized_constructor"
+recipe = "coordinate_product"
+claim_ids = ["linf-threshold-rows256-cap-one-half-bits128-every-margin-obstruction"]
+verification_class = "kernel_checked"

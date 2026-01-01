@@ -1,0 +1,1561 @@
+schema_version = 1
+
+[[declaration]]
+name = "CertifiedJL.ProjectionDistribution"
+kind = "row_law"
+owner = "CertifiedJL/Model/ProjectionDistribution.lean"
+
+[[declaration]]
+name = "CertifiedJL.NonnegativeRatio"
+kind = "exact_parameter"
+owner = "CertifiedJL/Statements/Shared/ExactRatio.lean"
+
+[[declaration]]
+name = "CertifiedJL.failureTargetWithSlack"
+kind = "failure_budget"
+owner = "CertifiedJL/Statements/Shared/BudgetAllocation.lean"
+
+[[declaration]]
+name = "CertifiedJL.equalBudgetShare"
+kind = "failure_budget"
+owner = "CertifiedJL/Statements/Shared/BudgetAllocation.lean"
+
+[[declaration]]
+name = "CertifiedJL.equalShareFailureTarget"
+kind = "failure_budget"
+owner = "CertifiedJL/Statements/Shared/BudgetAllocation.lean"
+
+[[declaration]]
+name = "CertifiedJL.OneRowUpperParameters"
+kind = "statement_parameters"
+owner = "CertifiedJL/Statements/OneRow/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.OneRowUpperTailAt"
+kind = "statement_schema"
+owner = "CertifiedJL/Statements/OneRow/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperParameters"
+kind = "statement_parameters"
+owner = "CertifiedJL/Statements/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt"
+kind = "statement_schema"
+owner = "CertifiedJL/Statements/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.CenteredInput"
+kind = "input_condition"
+owner = "CertifiedJL/Statements/Shared/Input.lean"
+
+[[declaration]]
+name = "CertifiedJL.InputThresholdAtMostNorm"
+kind = "input_condition"
+owner = "CertifiedJL/Statements/Shared/Input.lean"
+
+[[declaration]]
+name = "CertifiedJL.InputThresholdWithinModulus"
+kind = "input_condition"
+owner = "CertifiedJL/Statements/Shared/Input.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerParameters"
+kind = "statement_parameters"
+owner = "CertifiedJL/Statements/LInf/Lower.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdSmallProjection"
+kind = "statement_event"
+owner = "CertifiedJL/Statements/LInf/Lower.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt"
+kind = "statement_schema"
+owner = "CertifiedJL/Statements/LInf/Lower.lean"
+
+[[declaration]]
+name = "CertifiedJL.OneRowUpperTailAt.mono_budget"
+kind = "budget_weakening"
+owner = "CertifiedJL/Statements/OneRow/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.mono_budget"
+kind = "budget_weakening"
+owner = "CertifiedJL/Statements/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt.mono_budget"
+kind = "budget_weakening"
+owner = "CertifiedJL/Statements/LInf/Lower.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_iUnion_lt_of_budgetAllocation"
+kind = "budget_composition"
+owner = "CertifiedJL/Statements/Shared/BudgetAllocation.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperFailure.antitone_threshold"
+kind = "threshold_monotonicity"
+owner = "CertifiedJL/Statements/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.mono_threshold"
+kind = "threshold_monotonicity"
+owner = "CertifiedJL/Statements/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperParameters"
+kind = "public_statement_schema"
+owner = "CertifiedJL/Statements/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperFailure"
+kind = "public_event"
+owner = "CertifiedJL/Statements/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt"
+kind = "public_statement_schema"
+owner = "CertifiedJL/Statements/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt.mono_budget"
+kind = "budget_monotonicity"
+owner = "CertifiedJL/Statements/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.realWrappedGaussianKernel"
+kind = "analytic_kernel"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/Gaussian.lean"
+
+[[declaration]]
+name = "CertifiedJL.singletonGaussianEnvelope"
+kind = "analytic_envelope"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/Gaussian.lean"
+
+[[declaration]]
+name = "CertifiedJL.realWrappedGaussianKernel_average_le_geometric"
+kind = "analytic_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/Gaussian.lean"
+
+[[declaration]]
+name = "CertifiedJL.realWrappedGaussianKernel_average_le_marginThree"
+kind = "analytic_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/Gaussian.lean"
+
+[[declaration]]
+name = "CertifiedJL.wrappedGaussianKernel_singleton_le_envelope"
+kind = "analytic_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/Gaussian.lean"
+
+[[declaration]]
+name = "CertifiedJL.sparseRow_wrappedGaussianKernel_singleton_le_envelope"
+kind = "retained_row_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/GaussianRow.lean"
+
+[[declaration]]
+name = "CertifiedJL.sparseRow_affineCenteredGaussian_le_singletonGaussianEnvelope"
+kind = "affine_row_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/GaussianRow.lean"
+
+[[declaration]]
+name = "CertifiedJL.sparseRow_affineCenteredGaussian_le_singletonGaussianEnvelope_of_centeredInput"
+kind = "protocol_input_row_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/Regimes/Singleton/GaussianRow.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2RealThresholdLowerFailure"
+kind = "analytic_event"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/ThresholdLower.lean"
+
+[[declaration]]
+name = "CertifiedJL.affineL2GeneralBound"
+kind = "analytic_bound"
+owner = "CertifiedJL/Projection/L2/Lower/BalancedTernary/L2General.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.General.ternaryAffineL2LowerTail_toReal_le_finiteTilt"
+kind = "certified_general_bound"
+owner = "CertifiedJL/Results/Affine/L2/Lower/General.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.General.ternaryAffineL2LowerTail_toReal_le_general"
+kind = "certified_general_bound"
+owner = "CertifiedJL/Results/Affine/L2/Lower/General.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.General.ternaryAffineL2LowerTail_toReal_le_general_of_ratio"
+kind = "certified_rational_adapter"
+owner = "CertifiedJL/Results/Affine/L2/Lower/General.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.General.ternaryAffineL2ThresholdLowerTailAt_of_generalBound_lt_failureTarget"
+kind = "certified_public_schema_adapter"
+owner = "CertifiedJL/Results/Affine/L2/Lower/General.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.General.ternaryAffineL2ThresholdLowerTailAt_of_finiteTilt_lt_failureTarget"
+kind = "certified_endpoint_schema_adapter"
+owner = "CertifiedJL/Results/Affine/L2/Lower/General.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Direct.ternaryAffineLInfThresholdLower256Cap67Over200Bits130"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Direct.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Direct.ternaryAffineLInfThresholdLower256Cap6Over25Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Direct.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Direct.ternaryAffineLInfThresholdLower_probability_le"
+kind = "certified_result_corollary"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Direct.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows192Bits128.ternaryL2ThresholdLower12"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows192Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows192Bits128.ternaryL2Upper287"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows192Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.Rows192Bits128.ternaryLInfThresholdLower17Over50"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Lower/Rows192Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows192Bits128.ternaryLInfUpper487Over50"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Upper/Rows192Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Composites.Rows192Bits128.allBounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/Composites/Rows192Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits128.ternaryL2ThresholdLower29"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Bits128.ternaryL2Upper338"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.certifiedEndpoint"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ofCertifiedEndpoint"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ofCertifiedEndpointAtBits"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5623Over16Bits140"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5641Over16Bits141"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5659Over16Bits142"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5677Over16Bits143"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2847Over8Bits144"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper357Bits145"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2865Over8Bits146"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper1437Over4Bits147"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5765Over16Bits148"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5783Over16Bits149"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5801Over16Bits150"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2909Over8Bits151"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper1459Over4Bits152"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower6Over25Rows256Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.TwoDecimal.rowPass21Over50_lt_13939Over20000"
+kind = "certified_result_corollary"
+owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower21Over50Rows256Bits133"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows256.ternaryLInfUpper39Over4Bits133"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Upper/Rows256.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows256.ternaryLInfUpper39Over4"
+kind = "certified_result_corollary"
+owner = "CertifiedJL/Results/LInf/Upper/Rows256.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits192.ternaryL2ThresholdLower9"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows256Bits192.ternaryLInfUpper1181Over100"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Upper/Rows256Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows384Bits192.ternaryL2ThresholdLower43"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows384Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows512Bits192.ternaryL2ThresholdLower71"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows512Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows512Bits193.ternaryL2ThresholdLower73"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows512Bits193.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows512Bits192.ternaryL2ThresholdLower73"
+kind = "certified_result_corollary"
+owner = "CertifiedJL/Results/L2/Lower/Rows512Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows512Bits256.ternaryL2ThresholdLower57"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows512Bits256.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.HighSecurity.allLowerBounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/L2/Lower/HighSecurity.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.HighSecurity.allLowerBoundsIncluding256"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/L2/Lower/HighSecurity.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.HighSecurity.allLowerBoundsIncludingFloor73"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/L2/Lower/HighSecurity.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower21Over50Rows384Bits200"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows384Bits192.ternaryLInfUpper1183Over100"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Upper/Rows384Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower47Over100Rows512Bits206"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows512Bits192.ternaryL2Upper607"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows512Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows512Bits192.ternaryLInfUpper1184Over100"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Upper/Rows512Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower21Over50Rows512Bits266"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.Rows512Bits256.ternaryLInfUpper1358Over100"
+kind = "certified_result"
+owner = "CertifiedJL/Results/LInf/Upper/Rows512Bits256.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Lower.HighSecurity.allThresholdLowerBounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/LInf/Lower/HighSecurity.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.LInf.Upper.HighSecurity.allUpperBounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/LInf/Upper/HighSecurity.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Composites.L2Rows256Bits128.allL2Bounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/Composites/L2Rows256Bits128.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryUpper336Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryUpper338Bits130Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper/SecurityCeiling.lean"
+
+[[declaration]]
+name = "CertifiedJL.thresholdLower512Bits192Floor76Witness"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/ThresholdLower76.lean"
+
+[[declaration]]
+name = "CertifiedJL.thresholdLower512Bits192Floor76Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/ThresholdLower76.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.TernaryLInfRows256CoordinateCap1Pass"
+kind = "obstruction_event"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryLInfRows256CoordinateCap1Bits128"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryLInfThresholdMarginOneBits130False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryLInfThresholdMarginOneFamilyFalse"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryLInfThresholdRows192Cap34Bits183False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor30Bits128False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor30Margin125Bits128False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.TernaryL2Rows256Floor30.admissible_witness"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/TernaryL2Rows256Floor30.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2ThresholdRows256Floor31Bits128False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.TernaryL2Rows256Floor31.admissible_family"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/TernaryL2Rows256Floor31.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryLInfThresholdRows256CapHalfBits128False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.TernaryLInfRows256CapHalf.realMargin_admissible_family"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/LInf/TernaryLInfRows256CapHalf.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.DenseSignThreshold.universal_real_threshold_failure"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/DenseSignThreshold.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2ThresholdRows192Floor12Bits132False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryL2UpperRows192Threshold287Bits130Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows192Upper287Bits130.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2UpperRows192Threshold287Bits130False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryL2UpperRows256Threshold404Bits192Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows256Upper404Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2UpperRows256Threshold404Bits192False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryL2UpperRows384Threshold507Bits192Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows384Upper507Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2UpperRows384Threshold507Bits192False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryL2UpperRows512Threshold605Bits192Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows512Upper605Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2UpperRows512Threshold605Bits192False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryL2UpperRows512Threshold678Bits256Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Upper/Rows512Upper678Bits256.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2UpperRows512Threshold678Bits256False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.ternaryLInfUpperRows192Threshold487Over50Bits134Counterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/LInf/TernaryLInfUpperRows192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryLInfUpperRows192Threshold487Over50Bits134False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Bits192Floor76False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.ternaryL2ThresholdRows512Bits192AtLeast76False"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions.lean"
+
+[[declaration]]
+name = "CertifiedJL.Obstructions.denseSignThreshold29FailsForEverySeed"
+kind = "obstruction"
+owner = "CertifiedJL/Obstructions/Lightweight.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows256Bits192.ternaryL2Upper406"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows256Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows384Bits192.ternaryL2Upper509"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows384Bits192.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Upper.Rows512Bits256.ternaryL2Upper681"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Upper/Rows512Bits256.lean"
+
+[[declaration]]
+name = "CertifiedJL.NonnegativeRatio.twoThirds"
+kind = "exact_parameter_transform"
+owner = "CertifiedJL/Statements/Transport/Scaling.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt"
+kind = "public_statement_schema"
+owner = "CertifiedJL/Statements/L2/Lower/Affine.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt"
+kind = "public_statement_schema"
+owner = "CertifiedJL/Statements/LInf/Lower/Affine.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.twoThirds"
+kind = "lower_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Scaling.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2UpperTailAt"
+kind = "public_statement_schema"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfUpperTailAt"
+kind = "public_statement_schema"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.to_affine"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2UpperTailAt.to_unshifted"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.affineL2UpperTailAt_iff"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt.to_affine"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfUpperTailAt.to_unshifted"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.affineLInfUpperTailAt_iff"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ClosedAcceptance"
+kind = "public_event"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfClosedAcceptance"
+kind = "public_event"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.closedAcceptance"
+kind = "acceptance_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.closedAcceptance_realThreshold"
+kind = "acceptance_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.closedLInfInputThreshold"
+kind = "exact_parameter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.closedAcceptance"
+kind = "acceptance_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.historyThenFreshMatrix"
+kind = "probability_experiment"
+owner = "CertifiedJL/Probability/Finite/HistoryThenFresh.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_historyThenFreshMatrix_eq"
+kind = "probability_identity"
+owner = "CertifiedJL/Probability/Finite/HistoryThenFresh.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_historyThenFreshMatrix_le"
+kind = "history_composition"
+owner = "CertifiedJL/Probability/Finite/HistoryThenFresh.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_historyThenFreshMatrix_historyEvent"
+kind = "probability_identity"
+owner = "CertifiedJL/Probability/Finite/HistoryThenFresh.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfHistoryValid"
+kind = "input_condition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineHistoryBadWitness"
+kind = "input_condition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.history_joint_le"
+kind = "history_composition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.history_badWitness_le_add_invalid"
+kind = "history_composition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.history_closedAcceptance_le_add_invalid"
+kind = "history_acceptance_composition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_finiteCall_le_sum"
+kind = "budget_composition"
+owner = "CertifiedJL/Probability/Finite/HistoryThenFresh.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower192Floor11Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower256Floor27Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower256Floor9Bits194"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower384Floor40Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower512Floor73Bits193"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower512Floor54Bits256"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower195Floor12Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower264Floor29Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower394Floor43Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower524Floor57Bits256"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower192Cap279Over1000Bits129"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower256Cap331Over1000Bits133"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower384Cap331Over1000Bits200"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower512Cap331Over1000Bits266"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower512Cap46Over125Bits206"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower256Cap9Over25Bits109"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower462Cap9Over25Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.allL2LowerBounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.allLInfLowerBounds"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper192Threshold287Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper192Cap487Over50Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper256Threshold338Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper512Threshold607Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper256Cap39Over4Bits133"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper256Cap1181Over100Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper384Cap1183Over100Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper512Cap1184Over100Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper512Cap1358Over100Bits256"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper256Threshold406Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper384Threshold509Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper512Threshold681Bits256"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower192Cap93Over500Margin2Bits129"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap4Over25Margin2Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap331Over1500Margin2Bits133"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower384Cap331Over1500Margin2Bits200"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower512Cap331Over1500Margin2Bits266"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower512Cap92Over375Margin2Bits206"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap67Over300Margin2Bits130"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap6Over25Margin2Bits109"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower462Cap6Over25Margin2Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2HistoryValid"
+kind = "input_condition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.history_joint_le"
+kind = "history_composition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_history_bad_le_add_invalid"
+kind = "history_composition"
+owner = "CertifiedJL/Probability/Finite/HistoryThenFresh.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.history_badWitness_le_add_invalid"
+kind = "history_composition"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerTailAt.closedAcceptance_realThreshold"
+kind = "acceptance_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt.closedAcceptance"
+kind = "acceptance_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.affine_radii"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.affine_norm"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt.affine_radii"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt.affine_norm"
+kind = "upper_tail_transport"
+owner = "CertifiedJL/Statements/Transport/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.centeredMod_odd_mul"
+kind = "exact_scaling"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.centeredMod_three_mul"
+kind = "exact_scaling"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.sqNorm_natCast_mul"
+kind = "exact_scaling"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.shiftedModularProjectionSqNorm_odd_mul"
+kind = "exact_scaling"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.centeredMod_natAbs_add_le"
+kind = "triangle_inequality"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.sum_sq_le_add_sq_of_pointwise_le"
+kind = "triangle_inequality"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.shiftedModularProjectionSqNorm_le_add_sq"
+kind = "triangle_inequality"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.sqrt_shiftedModularProjectionSqNorm_le"
+kind = "triangle_inequality"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.centeredShiftLInf"
+kind = "exact_statistic"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.centeredMod_shift_le_centeredShiftLInf"
+kind = "coordinate_bound"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.affineModularCoordinate_le_add"
+kind = "triangle_inequality"
+owner = "CertifiedJL/Model/Modular/AffineTransport.lean"
+
+[[declaration]]
+name = "CertifiedJL.ProjectionDistribution.matrixPMF_map_restrictRows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Model/Projection/RowRestriction.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability_matrixPMF_restrictRows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Model/Projection/RowRestriction.lean"
+
+[[declaration]]
+name = "CertifiedJL.restrictRows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Model/Projection/RowRestriction.lean"
+
+[[declaration]]
+name = "CertifiedJL.restrictRows_apply"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Model/Projection/RowRestriction.lean"
+
+[[declaration]]
+name = "CertifiedJL.sparseRademacherMatrix_map_restrictRows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Model/Projection/RowRestriction.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.mono_squaredNormFloor"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.mono_modulusMargin"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2UpperTailAt.mono_budget"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.mono_coordinateCap"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.mono_modulusMargin"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdSmallProjection.mono_coordinateCap"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfUpperTailAt.mono_budget"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.InputThresholdWithinModulus.antitone_margin"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerFailure.mono_squaredNormFloor"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerTailAt.mono_squaredNormFloor"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerTailAt.mono_modulusMargin"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt.mono_coordinateCap"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt.mono_modulusMargin"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdSmallProjection.mono_coordinateCap"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperFailure.antitone_coordinateThreshold"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt.mono_coordinateThreshold"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.NonnegativeRatio.LE.squaredLE"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.failureTarget_antitone"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/ParameterMonotonicity.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.extend_rows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.extend_rows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerTailAt.extend_rows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.restrict_rows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperTailAt.mono_parameters"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt.extend_rows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfUpperTailAt.restrict_rows"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.shiftedModularProjectionSqNorm_restrictRows_le"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.modularProjectionSqNorm_restrictRows_le"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.fourNinths"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Scaling.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.closedAcceptance_realThreshold"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.LInfThresholdLowerTailAt.closedAcceptance_realThreshold"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.NonnegativeRatio.fourNinths"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Scaling.lean"
+
+[[declaration]]
+name = "CertifiedJL.affineL2ThresholdLowerFailure_scale_three_iff"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/Transport/Scaling.lean"
+
+[[declaration]]
+name = "CertifiedJL.affineLInfClosedAcceptance_oddScale_implies_smallProjection"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.exists_odd_scale_nat_of_lInf_headroom"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/Acceptance.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.history_closedAcceptance_le_add_invalid"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2UpperTailAt.history_le"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfUpperTailAt.history_le"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Protocol/AffineFreshMatrix.lean"
+
+[[declaration]]
+name = "CertifiedJL.combined_gaussian_kernel_identities"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Analysis/Gaussian/GaussianCosine.lean"
+
+[[declaration]]
+name = "CertifiedJL.gaussian_complex_exponential_kernel"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Analysis/Gaussian/GaussianCharacteristic.lean"
+
+[[declaration]]
+name = "CertifiedJL.gaussian_exp_linear_kernel"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Probability/Distributions/Gaussian/GaussianLinear.lean"
+
+[[declaration]]
+name = "CertifiedJL.Probability.integral_Ioi_exp_neg_mul_sq_lt"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Analysis/Gaussian/GaussianMillsStrict.lean"
+
+[[declaration]]
+name = "CertifiedJL.Probability.standardGaussianTail_lt_mills"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Analysis/Gaussian/GaussianMillsStrict.lean"
+
+[[declaration]]
+name = "CertifiedJL.TrigonometricBernstein.chebyshevCombinationPower_eq_from"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Certificates/Shared/TrigonometricBernstein.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerTailAt.mono_budget"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/L2/Lower.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.mono_budget"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/L2/Lower/Affine.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.mono_budget"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/LInf/Lower/Affine.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineL2ThresholdLowerTailAt.to_unshifted"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/L2/Lower/Affine.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineLInfThresholdLowerTailAt.to_unshifted"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Statements/LInf/Lower/Affine.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryL2Upper195Threshold338Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryAffineL2Upper195Threshold338Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryL2Upper264Threshold509Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryAffineL2Upper264Threshold509Bits128"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryL2Upper394Threshold607Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryAffineL2Upper394Threshold607Bits192"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryLInfUpper462Cap1358Over100Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.ternaryAffineLInfUpper462Cap1358Over100Bits197"
+kind = "certified_result"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.LNPLowerTail.kappaOneProbability_exact"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.LNPLowerTail.kappaOneCounterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.LNPLowerTail.kappaTwo_integerComparison"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.LNPLowerTail.kappaTwoCounterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.LNPLowerTail.lemmaTwoTenCounterexample"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.OrthusPrintedParameters.printedParameterBridge"
+kind = "obstruction"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/OrthusPrintedParameters.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.Transports.Rows.allRowRestrictedUpperEndpoints"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Results/Transports/Rows.lean"
+
+[[declaration]]
+name = "CertifiedJL.Counterexamples.LNPLowerTail.kappaOnePrintedCounterexample"
+kind = "theorem_adapter"
+owner = "CertifiedJL/Projection/Counterexamples/L2Lower/LNPLowerTail.lean"
+
+[[declaration]]
+name = "CertifiedJL.ProjectionDistribution.rowPMF"
+kind = "distribution_pmf"
+owner = "CertifiedJL/Model/ProjectionDistribution.lean"
+
+[[declaration]]
+name = "CertifiedJL.ProjectionDistribution.matrixPMF"
+kind = "distribution_pmf"
+owner = "CertifiedJL/Model/ProjectionDistribution.lean"
+
+[[declaration]]
+name = "CertifiedJL.eventProbability"
+kind = "probability_measure"
+owner = "CertifiedJL/Probability/Finite/Experiment.lean"
+
+[[declaration]]
+name = "CertifiedJL.failureTarget"
+kind = "failure_budget"
+owner = "CertifiedJL/Probability/Finite/FailureBudget.lean"
+
+[[declaration]]
+name = "CertifiedJL.sparseRademacherRow"
+kind = "distribution_pmf"
+owner = "CertifiedJL/Model/Distributions/BalancedTernary.lean"
+
+[[declaration]]
+name = "CertifiedJL.sparseRademacherMatrix"
+kind = "distribution_pmf"
+owner = "CertifiedJL/Model/Distributions/BalancedTernary.lean"
+
+[[declaration]]
+name = "CertifiedJL.centeredMod"
+kind = "modular_arithmetic"
+owner = "CertifiedJL/Model/Modular/Centered.lean"
+
+[[declaration]]
+name = "CertifiedJL.sqNorm"
+kind = "squared_norm"
+owner = "CertifiedJL/Model/Vectors/SquaredNorm.lean"
+
+[[declaration]]
+name = "CertifiedJL.rowDot"
+kind = "projection_observable"
+owner = "CertifiedJL/Model/Modular/Projection.lean"
+
+[[declaration]]
+name = "CertifiedJL.projectionSqNorm"
+kind = "projection_observable"
+owner = "CertifiedJL/Model/Modular/Projection.lean"
+
+[[declaration]]
+name = "CertifiedJL.modularProjectionSqNorm"
+kind = "projection_observable"
+owner = "CertifiedJL/Model/Modular/Projection.lean"
+
+[[declaration]]
+name = "CertifiedJL.shiftedModularProjectionSqNorm"
+kind = "projection_observable"
+owner = "CertifiedJL/Model/Modular/Projection.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2ThresholdLowerFailure"
+kind = "public_event"
+owner = "CertifiedJL/Statements/L2/Lower.lean"
+
+[[declaration]]
+name = "CertifiedJL.L2UpperFailure"
+kind = "public_event"
+owner = "CertifiedJL/Statements/L2/Upper.lean"
+
+[[declaration]]
+name = "CertifiedJL.AffineRatioEndpointNumeric.endpointCheck"
+kind = "exact_checker"
+owner = "CertifiedJL/Certificates/Families/Affine/Assembly/RatioL2Endpoint.lean"
+
+[[declaration]]
+name = "CertifiedJL.CertificateAssembly.affineL2RatioEndpoint"
+kind = "certificate_assembly"
+owner = "CertifiedJL/Certificates/Families/Affine/Assembly/RatioL2Endpoint.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.frontier"
+kind = "exact_endpoint_frontier"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.frontier_all_checked"
+kind = "certified_result_aggregate"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower79Over4Bits152"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower20Bits151"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower41Over2Bits150"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower83Over4Bits149"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower21Bits148"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower85Over4Bits147"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower43Over2Bits146"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower87Over4Bits145"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+
+[[declaration]]
+name = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower22Bits144"
+kind = "certified_result"
+owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"

@@ -1,0 +1,77 @@
+schema_version = 1
+
+# Lightweight roots built by ordinary fast validation. The batch size limits
+# concurrent root elaboration without changing the imported theorem closure.
+[[lean_group]]
+id = "fast"
+batch_size = 4
+batch_size_env = "CERTIFIEDJL_FAST_VALIDATION_BATCH_SIZE"
+roots = [
+  "CertifiedJL.Tests.StatementCanaries",
+  "CertifiedJL.Tests.ModelCanaries",
+  "CertifiedJL.Tests.ObstructionCanariesFast",
+  "CertifiedJL.Tests.RowTensorization",
+  "CertifiedJL.Tests.SingletonGaussian",
+  "CertifiedJL.Tests.AffineL2General",
+  "CertifiedJL.Tests.AffineEndpoints",
+  "CertifiedJL.Tests.AffineTransports",
+  "CertifiedJL.Tests.RowTransports",
+  "CertifiedJL.Tests.GaussianKernelIdentities",
+  "CertifiedJL.Tests.TernaryLInfTwoDecimalThreshold",
+  "CertifiedJL.Tests.SparseOneRowProfileSplitImport",
+  "CertifiedJL.Tests.CertificateReplayAlternatives",
+  "CertifiedJLFast",
+  "CertifiedJLFast.Tests.AxiomFootprints",
+  "CertifiedJLFast.Tests.PublicAPI",
+]
+
+# Exact certificate tests and mutation canaries. Their certificate dependencies
+# have already been materialized by the library stage; two roots per Lake
+# process retains the repository's conservative memory policy.
+[[lean_group]]
+id = "kernel-canaries"
+batch_size = 2
+batch_size_env = "CERTIFIEDJL_KERNEL_CANARY_BATCH_SIZE"
+roots = [
+  "CertifiedJL.Tests.AxiomFootprints",
+  "CertifiedJL.Tests.AffineResultAxioms",
+  "CertifiedJL.Tests.StatementCanaries",
+  "CertifiedJL.Tests.ModelCanaries",
+  "CertifiedJL.Tests.PublicAPI",
+  "CertifiedJL.Tests.ObstructionCanaries",
+  "CertifiedJL.Tests.LiteratureCounterexamples",
+  "CertifiedJL.Tests.MainTheoremNotation",
+  "CertifiedJL.Tests.TernaryLInfTwoDecimalThreshold",
+  "CertifiedJL.Tests.TernaryLInfTwoDecimalFourierBridge",
+  "CertifiedJL.Tests.ClosedIntervalTransfer",
+  "CertifiedJL.Tests.RowTensorization",
+  "CertifiedJL.Tests.SingletonGaussian",
+  "CertifiedJL.Tests.AffineL2General",
+  "CertifiedJL.Tests.AffineEndpoints",
+  "CertifiedJL.Tests.AffineTransports",
+  "CertifiedJL.Tests.RowTransports",
+  "CertifiedJL.Tests.GaussianKernelIdentities",
+  "CertifiedJL.Tests.EndpointRiemann",
+  "CertifiedJL.Tests.FiniteConditioningLower",
+  "CertifiedJL.Tests.SeedPartition",
+  "CertifiedJL.Tests.OneRowCertificateCanaries",
+  "CertifiedJL.Tests.OneRowReplayCanaries",
+  "CertifiedJL.Tests.UpperTailCanaries",
+]
+
+# Scheduling metadata stays separate from replay-families.toml, whose entries
+# remain timeless semantic certificate boundaries. Targets are resolved from
+# those cataloged families at validation time.
+[[replay_group]]
+id = "sparse-lower"
+batch_size = 1
+batch_size_env = "CERTIFIEDJL_SPARSE_LOWER_BATCH_SIZE"
+family_ids = [
+  "ternary-threshold-lower",
+  "ternary-threshold-lower-192-bits128",
+  "ternary-threshold-lower-256-bits192",
+  "ternary-threshold-lower-384-bits192",
+  "ternary-threshold-lower-512-bits192",
+  "ternary-threshold-lower-512-floor73-bits193",
+  "ternary-threshold-lower-512-bits256",
+]

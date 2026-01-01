@@ -1,0 +1,2147 @@
+schema_version = 1
+
+[[result]]
+id = "rows192-ternary-l2-threshold-lower-12-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 192
+threshold_numerator = 12
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-128"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows192Bits128.ternaryL2ThresholdLower12"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows192Bits128.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows192-bits128",
+]
+paper_locator = "thm:rows192-parameter-set"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows192-ternary-l2-upper-287-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 192
+threshold_numerator = 287
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows192Bits128.ternaryL2Upper287"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows192Bits128.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows192-bits128"]
+paper_locator = "thm:rows192-parameter-set"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows192-ternary-linf-threshold-lower-17-over-50-bits129"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+rows = 192
+coordinate_cap_numerator = 17
+coordinate_cap_denominator = 50
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q"
+failure_budget = "2^-129"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Lower.Rows192Bits128.ternaryLInfThresholdLower17Over50"
+lean_owner = "CertifiedJL/Results/LInf/Lower/Rows192Bits128.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["ternary-linf-two-decimal-cap34"]
+paper_locator = "thm:rows192-parameter-set"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$"
+
+[[result]]
+id = "rows192-ternary-linf-upper-487-over-50-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 192
+coordinate_threshold_numerator = 487
+coordinate_threshold_denominator = 50
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Upper.Rows192Bits128.ternaryLInfUpper487Over50"
+lean_owner = "CertifiedJL/Results/LInf/Upper/Rows192Bits128.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "thm:rows192-parameter-set"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-338-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 338
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Bits128.ternaryL2Upper338"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Bits128.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-rows256-bits128"]
+paper_locator = "thm:sparse-upper-338"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5623-over-16-bits140"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5623
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-140"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5623Over16Bits140"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5641-over-16-bits141"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5641
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-141"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5641Over16Bits141"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5659-over-16-bits142"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5659
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-142"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5659Over16Bits142"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5677-over-16-bits143"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5677
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-143"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5677Over16Bits143"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-2847-over-8-bits144"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 2847
+threshold_denominator = 8
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-144"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2847Over8Bits144"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-357-bits145"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 357
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-145"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper357Bits145"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-2865-over-8-bits146"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 2865
+threshold_denominator = 8
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-146"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2865Over8Bits146"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-1437-over-4-bits147"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 1437
+threshold_denominator = 4
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-147"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper1437Over4Bits147"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5765-over-16-bits148"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5765
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-148"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5765Over16Bits148"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5783-over-16-bits149"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5783
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-149"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5783Over16Bits149"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-5801-over-16-bits150"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 5801
+threshold_denominator = 16
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-150"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper5801Over16Bits150"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-2909-over-8-bits151"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 2909
+threshold_denominator = 8
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-151"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper2909Over8Bits151"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-1459-over-4-bits152"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 1459
+threshold_denominator = 4
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-152"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Frontier.ternaryL2Upper1459Over4Bits152"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Frontier.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-upper-ternary-contour-rows256-rescaled-frontier"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-29-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 29
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-128"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits128.ternaryL2ThresholdLower29"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits128.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows256-bits128",
+]
+paper_locator = "thm:threshold-sparse-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-9-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 9
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-192"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits192.ternaryL2ThresholdLower9"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows256-bits192",
+]
+paper_locator = "thm:high-security-l2-threshold-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows384-ternary-l2-threshold-lower-43-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 384
+threshold_numerator = 43
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-192"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows384Bits192.ternaryL2ThresholdLower43"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows384Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows384-bits192",
+]
+paper_locator = "thm:high-security-l2-threshold-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows512-ternary-l2-threshold-lower-73-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 512
+threshold_numerator = 73
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-192"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows512Bits192.ternaryL2ThresholdLower73"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows512Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows512-floor73-bits193",
+]
+paper_locator = "thm:high-security-l2-threshold-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows512-ternary-l2-threshold-lower-73-bits193"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 512
+threshold_numerator = 73
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-193"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows512Bits193.ternaryL2ThresholdLower73"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows512Bits193.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows512-floor73-bits193",
+]
+paper_locator = "thm:high-security-l2-threshold-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows512-ternary-l2-threshold-lower-71-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 512
+threshold_numerator = 71
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-192"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows512Bits192.ternaryL2ThresholdLower71"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows512Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows512-bits192",
+]
+paper_locator = "thm:high-security-l2-threshold-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows512-ternary-l2-threshold-lower-57-bits256"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 512
+threshold_numerator = 57
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-256"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows512Bits256.ternaryL2ThresholdLower57"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows512Bits256.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "l2-threshold-lower-ternary-shared-one-row",
+  "l2-threshold-lower-ternary-rows512-bits256",
+]
+paper_locator = "thm:high-security-l2-threshold-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows512-ternary-l2-upper-607-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 512
+threshold_numerator = 607
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows512Bits192.ternaryL2Upper607"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows512Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows512-bits192"]
+paper_locator = "thm:high-security-l2-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-linf-threshold-lower-6-over-25-bits197"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 6
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q"
+failure_budget = "2^-197"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower6Over25Rows256Bits197"
+lean_owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["ternary-linf-two-decimal-cap24"]
+paper_locator = "thm:high-security-linf-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$"
+
+[[result]]
+id = "rows256-ternary-linf-threshold-lower-21-over-50-bits133"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 21
+coordinate_cap_denominator = 50
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q"
+failure_budget = "2^-133"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower21Over50Rows256Bits133"
+lean_owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["ternary-linf-two-decimal-cap42"]
+paper_locator = "thm:orthus-infinity-repair"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$"
+
+[[result]]
+id = "rows256-ternary-linf-upper-39-over-4-bits133"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 256
+coordinate_threshold_numerator = 39
+coordinate_threshold_denominator = 4
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-133"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Upper.Rows256.ternaryLInfUpper39Over4Bits133"
+lean_owner = "CertifiedJL/Results/LInf/Upper/Rows256.lean"
+verification_class = "kernel_checked"
+certificate_ids = [
+  "one-row-normal-approximation-moderate",
+  "one-row-ternary-scalar-envelope",
+]
+paper_locator = "thm:linf-upper-256"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-linf-upper-1181-over-100-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 256
+coordinate_threshold_numerator = 1181
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Upper.Rows256Bits192.ternaryLInfUpper1181Over100"
+lean_owner = "CertifiedJL/Results/LInf/Upper/Rows256Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "thm:high-security-linf-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows384-ternary-linf-threshold-lower-21-over-50-bits200"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+rows = 384
+coordinate_cap_numerator = 21
+coordinate_cap_denominator = 50
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q"
+failure_budget = "2^-200"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower21Over50Rows384Bits200"
+lean_owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["ternary-linf-two-decimal-cap42"]
+paper_locator = "thm:high-security-linf-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$"
+
+[[result]]
+id = "rows384-ternary-linf-upper-1183-over-100-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 384
+coordinate_threshold_numerator = 1183
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Upper.Rows384Bits192.ternaryLInfUpper1183Over100"
+lean_owner = "CertifiedJL/Results/LInf/Upper/Rows384Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "thm:high-security-linf-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows512-ternary-linf-threshold-lower-47-over-100-bits206"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+rows = 512
+coordinate_cap_numerator = 47
+coordinate_cap_denominator = 100
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q"
+failure_budget = "2^-206"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower47Over100Rows512Bits206"
+lean_owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["ternary-linf-two-decimal-cap47"]
+paper_locator = "thm:high-security-linf-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$"
+
+[[result]]
+id = "rows512-ternary-linf-upper-1184-over-100-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 512
+coordinate_threshold_numerator = 1184
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Upper.Rows512Bits192.ternaryLInfUpper1184Over100"
+lean_owner = "CertifiedJL/Results/LInf/Upper/Rows512Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "thm:high-security-linf-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows512-ternary-linf-threshold-lower-21-over-50-bits266"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "lower"
+rows = 512
+coordinate_cap_numerator = 21
+coordinate_cap_denominator = 50
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q"
+failure_budget = "2^-266"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Lower.TwoDecimal.lower21Over50Rows512Bits266"
+lean_owner = "CertifiedJL/Results/LInf/Lower/TwoDecimal.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["ternary-linf-two-decimal-cap42"]
+paper_locator = "thm:high-security-linf-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$"
+
+[[result]]
+id = "rows512-ternary-linf-upper-1358-over-100-bits256"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 512
+coordinate_threshold_numerator = 1358
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-256"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.LInf.Upper.Rows512Bits256.ternaryLInfUpper1358Over100"
+lean_owner = "CertifiedJL/Results/LInf/Upper/Rows512Bits256.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "thm:high-security-linf-upper"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-l2-upper-406-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 256
+threshold_numerator = 406
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows256Bits192.ternaryL2Upper406"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows256Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows256-bits192"]
+paper_locator = "prop:l2-upper-256-192-406"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows384-ternary-l2-upper-509-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 384
+threshold_numerator = 509
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows384Bits192.ternaryL2Upper509"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows384Bits192.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows384-bits192"]
+paper_locator = "prop:l2-upper-384-192-509"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows512-ternary-l2-upper-681-bits256"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 512
+threshold_numerator = 681
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-256"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Upper.Rows512Bits256.ternaryL2Upper681"
+lean_owner = "CertifiedJL/Results/L2/Upper/Rows512Bits256.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows512-bits256"]
+paper_locator = "prop:l2-upper-512-256-681"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-67-over-200-bits130"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 67
+coordinate_cap_denominator = 200
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-130"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Direct.ternaryAffineLInfThresholdLower256Cap67Over200Bits130"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Direct.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows192-ternary-affine-l2-threshold-lower-11-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 192
+threshold_numerator = 11
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-128"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower192Floor11Bits128"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-l2-threshold-lower-27-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 27
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-128"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower256Floor27Bits128"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-l2-threshold-lower-9-bits194"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 9
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-194"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower256Floor9Bits194"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows384-ternary-affine-l2-threshold-lower-40-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 384
+threshold_numerator = 40
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-192"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower384Floor40Bits192"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows512-ternary-affine-l2-threshold-lower-73-bits193"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 512
+threshold_numerator = 73
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-193"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower512Floor73Bits193"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows512-ternary-affine-l2-threshold-lower-54-bits256"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 512
+threshold_numerator = 54
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-256"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower512Floor54Bits256"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows195-ternary-affine-l2-threshold-lower-12-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 195
+threshold_numerator = 12
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-128"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower195Floor12Bits128"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows264-ternary-affine-l2-threshold-lower-29-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 264
+threshold_numerator = 29
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-128"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower264Floor29Bits128"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows394-ternary-affine-l2-threshold-lower-43-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 394
+threshold_numerator = 43
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-192"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower394Floor43Bits192"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows524-ternary-affine-l2-threshold-lower-57-bits256"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_squared"
+tail = "lower"
+rows = 524
+threshold_numerator = 57
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-256"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Lower.Endpoints.ternaryAffineL2ThresholdLower524Floor57Bits256"
+lean_owner = "CertifiedJL/Results/Affine/L2/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-l2-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows192-ternary-affine-linf-threshold-lower-279-over-1000-bits129"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 192
+coordinate_cap_numerator = 279
+coordinate_cap_denominator = 1000
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-129"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower192Cap279Over1000Bits129"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-331-over-1000-bits133"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 331
+coordinate_cap_denominator = 1000
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-133"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower256Cap331Over1000Bits133"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows384-ternary-affine-linf-threshold-lower-331-over-1000-bits200"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 384
+coordinate_cap_numerator = 331
+coordinate_cap_denominator = 1000
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-200"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower384Cap331Over1000Bits200"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows512-ternary-affine-linf-threshold-lower-331-over-1000-bits266"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 512
+coordinate_cap_numerator = 331
+coordinate_cap_denominator = 1000
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-266"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower512Cap331Over1000Bits266"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows512-ternary-affine-linf-threshold-lower-46-over-125-bits206"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 512
+coordinate_cap_numerator = 46
+coordinate_cap_denominator = 125
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-206"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower512Cap46Over125Bits206"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-9-over-25-bits109"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 9
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-109"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower256Cap9Over25Bits109"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows462-ternary-affine-linf-threshold-lower-9-over-25-bits197"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 462
+coordinate_cap_numerator = 9
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-197"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Endpoints.ternaryAffineLInfThresholdLower462Cap9Over25Bits197"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Endpoints.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-endpoints"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-6-over-25-bits197"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 6
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-197"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.Direct.ternaryAffineLInfThresholdLower256Cap6Over25Bits197"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/Direct.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "thm:affine-linf-lower"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows192-ternary-affine-l2-upper-287-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 192
+threshold_numerator = 287
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper192Threshold287Bits128"
+lean_owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows192-bits128"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows192-ternary-affine-linf-upper-487-over-50-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 192
+coordinate_threshold_numerator = 487
+coordinate_threshold_denominator = 50
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper192Cap487Over50Bits128"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"
+
+# Exact rational 256-row lower-tail frontier for JL budget allocation.
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-79-over-4-bits152"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 79
+threshold_denominator = 4
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-152"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower79Over4Bits152"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-20-bits151"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 20
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-151"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower20Bits151"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-41-over-2-bits150"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 41
+threshold_denominator = 2
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-150"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower41Over2Bits150"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-83-over-4-bits149"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 83
+threshold_denominator = 4
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-149"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower83Over4Bits149"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-21-bits148"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 21
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-148"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower21Bits148"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-85-over-4-bits147"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 85
+threshold_denominator = 4
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-147"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower85Over4Bits147"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-43-over-2-bits146"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 43
+threshold_denominator = 2
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-146"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower43Over2Bits146"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-87-over-4-bits145"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 87
+threshold_denominator = 4
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-145"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower87Over4Bits145"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-l2-threshold-lower-22-bits144"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "lower"
+rows = 256
+threshold_numerator = 22
+threshold_denominator = 1
+threshold_reference = "public_input_threshold_squared"
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 3
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 3 * b <= q"
+failure_budget = "2^-144"
+event_comparison = "strict_lt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.L2.Lower.Rows256Bits152.ternaryL2ThresholdLower22Bits144"
+lean_owner = "CertifiedJL/Results/L2/Lower/Rows256Bits152.lean"
+verification_class = "replay_pending"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row", "l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:impact"
+paper_scope_tex = "odd $q$, centered integer $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $3b\\le q$"
+
+[[result]]
+id = "rows256-ternary-affine-l2-upper-338-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 256
+threshold_numerator = 338
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper256Threshold338Bits128"
+lean_owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-rows256-bits128"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows512-ternary-affine-l2-upper-607-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 512
+threshold_numerator = 607
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper512Threshold607Bits192"
+lean_owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows512-bits192"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows256-ternary-affine-linf-upper-39-over-4-bits133"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 256
+coordinate_threshold_numerator = 39
+coordinate_threshold_denominator = 4
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-133"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper256Cap39Over4Bits133"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["one-row-normal-approximation-moderate", "one-row-ternary-scalar-envelope"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"
+
+[[result]]
+id = "rows256-ternary-affine-linf-upper-1181-over-100-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 256
+coordinate_threshold_numerator = 1181
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper256Cap1181Over100Bits192"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"
+
+[[result]]
+id = "rows384-ternary-affine-linf-upper-1183-over-100-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 384
+coordinate_threshold_numerator = 1183
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper384Cap1183Over100Bits192"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"
+
+[[result]]
+id = "rows512-ternary-affine-linf-upper-1184-over-100-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 512
+coordinate_threshold_numerator = 1184
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper512Cap1184Over100Bits192"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"
+
+[[result]]
+id = "rows512-ternary-affine-linf-upper-1358-over-100-bits256"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 512
+coordinate_threshold_numerator = 1358
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-256"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Upper.ternaryAffineLInfUpper512Cap1358Over100Bits256"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"
+
+[[result]]
+id = "rows256-ternary-affine-l2-upper-406-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 256
+threshold_numerator = 406
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper256Threshold406Bits192"
+lean_owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows256-bits192"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows384-ternary-affine-l2-upper-509-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 384
+threshold_numerator = 509
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper384Threshold509Bits192"
+lean_owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows384-bits192"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows512-ternary-affine-l2-upper-681-bits256"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 512
+threshold_numerator = 681
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-256"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.L2.Upper.ternaryAffineL2Upper512Threshold681Bits256"
+lean_owner = "CertifiedJL/Results/Affine/L2/Upper.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows512-bits256"]
+paper_locator = "sec:impact"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows192-ternary-affine-linf-threshold-lower-93-over-500-margin2-bits129"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 192
+coordinate_cap_numerator = 93
+coordinate_cap_denominator = 500
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-129"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower192Cap93Over500Margin2Bits129"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-4-over-25-margin2-bits197"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 4
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-197"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap4Over25Margin2Bits197"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-331-over-1500-margin2-bits133"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 331
+coordinate_cap_denominator = 1500
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-133"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap331Over1500Margin2Bits133"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows384-ternary-affine-linf-threshold-lower-331-over-1500-margin2-bits200"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 384
+coordinate_cap_numerator = 331
+coordinate_cap_denominator = 1500
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-200"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower384Cap331Over1500Margin2Bits200"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows512-ternary-affine-linf-threshold-lower-331-over-1500-margin2-bits266"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 512
+coordinate_cap_numerator = 331
+coordinate_cap_denominator = 1500
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-266"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower512Cap331Over1500Margin2Bits266"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows512-ternary-affine-linf-threshold-lower-92-over-375-margin2-bits206"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 512
+coordinate_cap_numerator = 92
+coordinate_cap_denominator = 375
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-206"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower512Cap92Over375Margin2Bits206"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-rows512-floor73-bits193"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-67-over-300-margin2-bits130"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 67
+coordinate_cap_denominator = 300
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-130"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap67Over300Margin2Bits130"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows256-ternary-affine-linf-threshold-lower-6-over-25-margin2-bits109"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 256
+coordinate_cap_numerator = 6
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-109"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower256Cap6Over25Margin2Bits109"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows462-ternary-affine-linf-threshold-lower-6-over-25-margin2-bits197"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "lower"
+rows = 462
+coordinate_cap_numerator = 6
+coordinate_cap_denominator = 25
+input_norm_cap_kind = "public_threshold_over_modulus"
+input_threshold_relation = "b^2 <= sqNorm(w)"
+modulus_margin_numerator = 2
+modulus_margin_denominator = 1
+input_condition = "odd q; centered integer vector w; positive natural threshold b; b^2 <= sqNorm(w); 2 * b <= q; arbitrary row-wise integer shift fixed before the matrix is sampled"
+failure_budget = "2^-197"
+event_comparison = "closed_le"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Affine.LInf.Lower.MarginTwo.ternaryAffineLInfThresholdLower462Cap6Over25Margin2Bits197"
+lean_owner = "CertifiedJL/Results/Affine/LInf/Lower/MarginTwo.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-threshold-lower-ternary-shared-one-row"]
+paper_locator = "sec:affine-instantiations"
+paper_scope_tex = "odd $q$, centered $\\mathbf w$, $b>0$, $b^2\\le\\norm{\\mathbf w}^2$, $2b\\le q$; arbitrary row-wise shift fixed before $\\mathbf J$"
+
+[[result]]
+id = "rows195-ternary-l2-upper-338-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 195
+threshold_numerator = 338
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryL2Upper195Threshold338Bits128"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-rows256-bits128"]
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows195-ternary-affine-l2-upper-338-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 195
+threshold_numerator = 338
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryAffineL2Upper195Threshold338Bits128"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-rows256-bits128"]
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows264-ternary-l2-upper-509-bits128"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 264
+threshold_numerator = 509
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryL2Upper264Threshold509Bits128"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows384-bits192"]
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows264-ternary-affine-l2-upper-509-bits128"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 264
+threshold_numerator = 509
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-128"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryAffineL2Upper264Threshold509Bits128"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows384-bits192"]
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows394-ternary-l2-upper-607-bits192"
+row_law = "balanced_ternary"
+statistic = "modular_l2_squared"
+tail = "upper"
+rows = 394
+threshold_numerator = 607
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryL2Upper394Threshold607Bits192"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows512-bits192"]
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows394-ternary-affine-l2-upper-607-bits192"
+row_law = "balanced_ternary"
+statistic = "affine_modular_l2_norm"
+tail = "upper"
+rows = 394
+threshold_numerator = 607
+threshold_denominator = 1
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-192"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryAffineL2Upper394Threshold607Bits192"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = ["l2-upper-ternary-contour-rows512-bits192"]
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "sqrt(U) * sqrt(sqNorm(w)) + sqrt(centered_shift_energy)"
+
+[[result]]
+id = "rows462-ternary-linf-upper-1358-over-100-bits197"
+row_law = "balanced_ternary"
+statistic = "modular_linf"
+tail = "upper"
+rows = 462
+coordinate_threshold_numerator = 1358
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; no norm restriction"
+failure_budget = "2^-197"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryLInfUpper462Cap1358Over100Bits197"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$ and integer vector $\\mathbf w$"
+
+[[result]]
+id = "rows462-ternary-affine-linf-upper-1358-over-100-bits197"
+row_law = "balanced_ternary"
+statistic = "affine_modular_linf"
+tail = "upper"
+rows = 462
+coordinate_threshold_numerator = 1358
+coordinate_threshold_denominator = 100
+input_norm_cap_kind = "unrestricted"
+input_condition = "every natural q and integer vector w; arbitrary row-wise integer shift fixed before the matrix is sampled; no input norm restriction"
+failure_budget = "2^-197"
+event_comparison = "strict_gt"
+probability_comparison = "strict_lt"
+lean = "CertifiedJL.Results.Transports.Rows.ternaryAffineLInfUpper462Cap1358Over100Bits197"
+lean_owner = "CertifiedJL/Results/Transports/Rows.lean"
+verification_class = "kernel_checked"
+certificate_ids = []
+paper_locator = "sec:row-restriction-endpoints"
+paper_scope_tex = "every natural $q$, integer $\\mathbf w$, and fixed row-wise shift; original upper radius plus the centered-shift norm"
+threshold_reference = "C * sqrt(sqNorm(w)) + max_centered_shift_coordinate"

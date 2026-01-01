@@ -1,0 +1,85 @@
+/-
+Copyright (c) 2026 Anonymous Author. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Anonymous Author
+-/
+
+import CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00
+import CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.Box00.Shard000
+import CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.Box00.Shard001
+import CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.Box00.Shard002
+
+/-! Kernel-checked assembly of upper-contour family box 0. -/
+
+namespace CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.Verified
+
+open CertifiedJL.SparseUpperContourFamily
+
+set_option linter.style.longLine false
+
+private def box00EnumeratedComputedChunks :
+    List (UpperContourKernel.DInterval (CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters).precision) :=
+  [
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨0, 0, 25⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨0, 25, 25⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨0, 50, 25⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨0, 75, 25⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨1, 0, 25⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨1, 25, 25⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨2, 0, 10⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨3, 0, 10⟩,
+    boxChunkValue CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) ⟨4, 0, 10⟩
+  ]
+
+private theorem box00ComputedChunks_eq_enumerated :
+    boxComputedChunks CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) =
+      box00EnumeratedComputedChunks := by
+  rfl
+
+private theorem box00EnumeratedComputedChunks_eq_generated :
+    box00EnumeratedComputedChunks = CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.chunks := by
+  simp only [box00EnumeratedComputedChunks, CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.chunks,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_00_chunk_000,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_00_chunk_001,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_00_chunk_002,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_00_chunk_003,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_01_chunk_000,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_01_chunk_001,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_02_chunk_000,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_03_chunk_000,
+    CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.box_00_segment_04_chunk_000]
+
+theorem box00ComputedChunks_eq_generated :
+    boxComputedChunks CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) =
+      CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.chunks :=
+  box00ComputedChunks_eq_enumerated.trans
+    box00EnumeratedComputedChunks_eq_generated
+
+private theorem box00GeneratedBound_eq_expected :
+    boxPrefactor CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) *
+      boxIntegralFrom CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default)
+        CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.chunks = CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.expectedBound := by
+  decide +kernel
+
+theorem box00Bound_eq_expected :
+    boxBound CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) =
+      CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.expectedBound := by
+  simp only [boxBound, boxIntegral, box00ComputedChunks_eq_generated]
+  exact box00GeneratedBound_eq_expected
+
+private theorem box00ExpectedCheck_eq_true :
+    Interval.upperLTCheck CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Data.Rows256Bits192Threshold406.Box00.expectedBound
+      (((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default)).target = true := by
+  decide +kernel
+
+theorem box00Check_eq_true :
+    boxCheck CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default) = true := by
+  rw [boxCheck, box00Bound_eq_expected]
+  exact box00ExpectedCheck_eq_true
+
+theorem box00_upperRat_lt :
+    (boxBound CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.parameters ((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default)).upperRat <
+      (((CertifiedJL.SparseUpperContourFamily.Instances.Rows256Bits192Threshold406.profileBoxes).getD 0 default)).target :=
+  Interval.upperLTCheck_sound box00Check_eq_true
+
+end CertifiedJL.Certificates.Families.L2Upper.ContourFamily.Replay.Rows256Bits192Threshold406.Verified
