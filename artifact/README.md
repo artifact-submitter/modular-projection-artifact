@@ -103,5 +103,5 @@ The resulting `offline-rebuild-report.json` explicitly states
 `authoritative_release_receipt: false`. It is additional reviewer evidence, not
 a replacement for the original anonymous cold-validation receipt.
 
-See [Anonymous submission artifact](../docs/submission-artifact.md) for source
-preparation, freeze-pointer, manuscript-review, and submission-composition rules.
+See the [reviewer guide](../REVIEWING.md) for the release download, verification,
+inspection, and full offline rebuild procedures.
