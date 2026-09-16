@@ -1,9 +1,10 @@
 # Review the proof artifact
 
-You can inspect the source on any platform. To use the precompiled proofs and
-bundled tools, use Linux x86-64 with Python 3.11 or newer. The validated system
-was Ubuntu 24.04. macOS and Windows cannot directly run the Linux executables;
-use a matching Linux environment for the commands below.
+You can inspect the source and verify the proof archive on any platform with
+Python 3.11 or newer. To run the precompiled proofs and bundled tools, use Linux
+x86-64. The validated system was Ubuntu 24.04. macOS and Windows cannot
+directly run the bundled Linux executables; use a matching Linux environment
+for those commands.
 
 The source tag `validated-source-linux-amd64` points to commit
 `dcb3f1e4792aaec07fc122ba96ce88b203f8e736`. Documentation on `main` may be
@@ -27,6 +28,34 @@ cataloged results to declaration names and source files. The generated reviewer
 file is a convenient selection of declarations; the full production kernel
 replay covers every production module, including results outside that selection.
 
+## Build the source natively on macOS or Linux
+
+This path checks the source with your platform's Lean installation. Install
+[Elan](https://github.com/leanprover/elan), then create a separate checkout at
+the validated source tag:
+
+```sh
+git worktree add ../modular-projection-source validated-source-linux-amd64
+cd ../modular-projection-source
+lake update
+lake build CertifiedJL
+```
+
+The checked-in `lean-toolchain` selects Lean 4.33.1, and
+`lake-manifest.json` records the dependency revisions. Generate and check the
+same reviewer selection used by the proof bundle:
+
+```sh
+python3 scripts/reviewer_workspace.py \
+  --output .lake/native-reviewer-workspace
+lake env lean .lake/native-reviewer-workspace/Review.lean
+```
+
+The final command prints the selected theorem types and axiom dependencies.
+This native source build is useful for interactive inspection, but it is not a
+replacement for the all-module release validation recorded in the bundle. Use
+the Linux workflow below to reproduce that stronger check.
+
 ## Download, verify, and extract
 
 Download the Linux proof archive and its checksum file from the
@@ -47,8 +76,21 @@ Do not continue if a checksum fails. Compare the archive identity reported by
 the verifier with the identity in the release notes. Internal hashes detect
 changes but do not authenticate an unknown download by themselves.
 
-From this repository's root, verify the archive and extract it into a directory
-that does not already exist:
+From this repository's root, run the platform-independent archive verifier:
+
+```sh
+python3 scripts/proof_bundle.py verify \
+  "$PWD/proof-bundle-linux-amd64.tar"
+```
+
+The command must print this bundle ID:
+
+```text
+sha256:6ebd2cd428cb11c99fb83501ae79e04dc3fb1291b6c4c54c922d38fd4ef09451
+```
+
+On Linux x86-64, also check the bundled toolchain against the host and extract
+the archive into a directory that does not already exist:
 
 ```sh
 python3 scripts/proof_bundle.py verify \
@@ -57,11 +99,12 @@ python3 scripts/proof_bundle.py verify \
   "$PWD/proof-bundle-linux-amd64.tar"
 ```
 
-This checks the archive members, validation receipt, source and build identities,
-platform, and bundled runtime. It does not require an existing Lean installation.
-Keep enough free space for both the archive and extracted files; the release
-notes give the final sizes. Rebuilding requires additional space for a second
-project build.
+The first command checks the archive members, validation receipt, and source and
+build identities on any platform. The Linux command additionally checks the
+platform and bundled runtime. Neither command requires an existing Lean
+installation. Keep enough free space for both the archive and extracted files;
+the release notes give the final sizes. Rebuilding requires additional space
+for a second project build.
 
 ## Inspect the proofs in a terminal or VS Code
 
